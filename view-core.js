@@ -2,11 +2,11 @@
 (function(root){
  const imageryUrl='https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer';
  const terrainUrl='https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer';
- const ranges={citadelle:900,'sans-souci':650,heritage:6200};
+ const ranges={citadelle:900,'sans-souci':650,ramiers:1000};
  function rangeFor(p){return ranges[p?.id]||1200;}
  function flightDuration(slow,reduced=false){return reduced?0:slow?6:0.8;}
  function bounds(p){
-   const span=p?.id==='heritage'?0.047:0.008;
+   const span=0.008;
    const lon=Number.isFinite(p?.lon)?p.lon:-72.24336,lat=Number.isFinite(p?.lat)?p.lat:19.57333;
    return [lon-span,lat-span*0.75,lon+span,lat+span*0.75];
  }

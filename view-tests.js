@@ -6,7 +6,7 @@
  test('Reduced motion overrides both camera speeds',()=>V.flightDuration(false,true)===0&&V.flightDuration(true,true)===0);
  test('Citadelle camera frames the landmark closely',()=>V.rangeFor({id:'citadelle'})===900);
  test('Palace camera frames the landmark closely',()=>V.rangeFor({id:'sans-souci'})===650);
- test('Park overview has a wider camera range',()=>V.rangeFor({id:'heritage'})>V.rangeFor({id:'citadelle'}));
+ test('Ramiers has its own landmark close-up',()=>V.rangeFor({id:'ramiers'})===1000);
  test('Imagery preview bounds contain selected coordinate',()=>{const u=new URL(V.exportUrl({lon:-72.24,lat:19.57}));const [w,s,e,n]=u.searchParams.get('bbox').split(',').map(Number);return w< -72.24&&e> -72.24&&s<19.57&&n>19.57;});
  test('Imagery preview explicitly uses geographic coordinates',()=>new URL(V.exportUrl({})).searchParams.get('bboxSR')==='4326');
  test('Invalid preview coordinates fall back to Citadelle',()=>!V.exportUrl({lon:NaN,lat:NaN}).includes('NaN'));

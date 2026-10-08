@@ -47,3 +47,5 @@ AI: “I’ll redo the globe and controls around actual geographic imagery, impr
 Accepted implementation changes to review: real satellite/elevation providers; local engine files; immediate selection text; mobile map layout; on-demand rendering; throttled flight HUD; touch controls. Rejected: treating a grid as a landmark view or claiming satellite/elevation data is a photorealistic building mesh.
 
 Debugging evidence: the first actual browser run reported “Cannot set properties of undefined (setting 'show')”. The fix guards absent sun/moon objects when sky effects are disabled. Missing runtime resource files were added rather than ignoring 404s. Browser tests use actual upstream imagery/elevation responses; container network transport limitations are explained in the evidence.
+
+Follow-up accepted: replace the overview only after verifying ISPAN’s original PDF coordinates. Rejected the corrupted OCR transcription. Added a pinned official Cesium CDN fallback for missing vendor uploads. User prompt: “yes verify everything and then implement everything efficiently.”

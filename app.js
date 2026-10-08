@@ -61,7 +61,7 @@
     return new Cesium.UrlTemplateImageryProvider({
       url:View.imageryUrl+'/tile/{z}/{y}/{x}',
       rectangle:Cesium.Rectangle.fromDegrees(...View.bounds(p)),
-      minimumLevel:p.id==='heritage'?11:14,maximumLevel:18,
+      minimumLevel:14,maximumLevel:18,
       credit:new Cesium.Credit('Satellite imagery: Esri, Vantor, Earthstar Geographics, GIS User Community')
     });
   }
@@ -178,13 +178,23 @@
   }
   async function loadEngine(){
     if(window.Cesium)return;
-    window.CESIUM_BASE_URL=new URL('vendor/cesium/',document.baseURI).href;
-    const existing=$('cesiumScript');if(existing)existing.remove();
-    await new Promise((resolve,reject)=>{
-      const script=document.createElement('script');script.id='cesiumScript';script.src='vendor/cesium/Cesium.js';script.async=true;
-      const timeout=setTimeout(()=>reject(Error('Cesium engine timed out')),20000);
-      script.onload=()=>{clearTimeout(timeout);resolve();};script.onerror=()=>{clearTimeout(timeout);reject(Error('Cesium engine could not load'));};document.head.append(script);
-    });
+    const local=new URL('vendor/cesium/',document.baseURI).href;
+    const remote='https://cesium.com/downloads/cesiumjs/releases/1.145/Build/Cesium/';
+    const failures=[];
+    for(const base of [local,remote]){
+      window.CESIUM_BASE_URL=base;
+      const existing=$('cesiumScript');if(existing)existing.remove();
+      try{
+        await new Promise((resolve,reject)=>{
+          const script=document.createElement('script');script.id='cesiumScript';script.src=base+'Cesium.js';script.async=true;
+          const timer=setTimeout(()=>{script.remove();reject(Error('engine request timed out'));},20000);
+          script.onload=()=>{clearTimeout(timer);window.Cesium?resolve():reject(Error('engine script did not initialize'));};
+          script.onerror=()=>{clearTimeout(timer);reject(Error('engine file unavailable'));};document.head.append(script);
+        });
+        return;
+      }catch(e){failures.push(base+': '+e.message);}
+    }
+    throw Error('Cesium could not load from the uploaded vendor folder or official fallback. '+failures.join('; '));
   }
   function deadline(promise,ms,label){return Promise.race([promise,new Promise((_,reject)=>{const timer=setTimeout(()=>reject(Error(label+' timed out')),ms);promise.finally(()=>clearTimeout(timer)).catch(()=>{});})]);}
   async function ensureWideImagery(){

@@ -11,6 +11,6 @@ test('Impossible date is rejected',()=>T.validatePlace({...data[0],checked:'2026
 test('Unsafe source scheme is rejected',()=>T.validatePlace({...data[0],source:'javascript:alert(1)'}).length>0);
 test('Initial flight state is in northern Haiti',()=>T.inArea(F.initial()));
 test('Nonfinite time cannot corrupt state',()=>JSON.stringify(F.step({...F.initial(),paused:false},NaN))===JSON.stringify({...F.initial(),paused:false}));
-test('UNESCO reference DMS conversion preserves longitude sign',()=>Math.abs(data[2].lon-(-72.23426805555556))<1e-10&&Math.abs(data[2].lat-19.573025)<1e-10);
+test('ISPAN Ramiers DMS conversion preserves west longitude',()=>Math.abs(data[2].lon-(-(72+14/60+40.29/3600)))<1e-10&&Math.abs(data[2].lat-(19+33/60+50.36/3600))<1e-10);
 if(typeof document!=='undefined')document.getElementById('featureResults').textContent=results.join('\n');else{console.log(results.join('\n'));if(results.some(x=>x.startsWith('FAIL')))process.exitCode=1;}
 })();

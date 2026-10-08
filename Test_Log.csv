@@ -87,3 +87,58 @@ D2,Upstream service,2026-10-08,All elevation requests succeed,One elevation tile
 M1,Student manual checks,Pending,Perform six checks from Canvas page 6,Exact Canvas page and student demonstration not supplied,NOT RUN,Manual_Checks.md
 P1,Partner review,Pending,Partner follows README and reports improvement,Requires actual partner; no feedback invented,NOT RUN,Partner_Review.md
 O1,Original starter WebGL checkpoint,Pending,Record original starter successful browser checkpoint,Original rule checks preserved; original WebGL checkpoint not established,NOT RUN,evidence/original-tests.txt
+1,Automated Node,2026-10-08,Next moves forward,PASS: Next moves forward,PASS,evidence/tour-tests.txt
+2,Automated Node,2026-10-08,Next wraps from the last stop to the first,PASS: Next wraps from the last stop to the first,PASS,evidence/tour-tests.txt
+3,Automated Node,2026-10-08,Previous wraps from the first stop to the last,PASS: Previous wraps from the first stop to the last,PASS,evidence/tour-tests.txt
+4,Automated Node,2026-10-08,Empty list does not crash,PASS: Empty list does not crash,PASS,evidence/tour-tests.txt
+5,Automated Node,2026-10-08,A complete record is usable,PASS: A complete record is usable,PASS,evidence/tour-tests.txt
+6,Automated Node,2026-10-08,"Missing longitude is flagged, not guessed","PASS: Missing longitude is flagged, not guessed",PASS,evidence/tour-tests.txt
+7,Automated Node,2026-10-08,Longitude 200 is out of range,PASS: Longitude 200 is out of range,PASS,evidence/tour-tests.txt
+8,Automated Node,2026-10-08,Swapped longitude/latitude is caught,PASS: Swapped longitude/latitude is caught,PASS,evidence/tour-tests.txt
+9,Automated Node,2026-10-08,Missing source is flagged,PASS: Missing source is flagged,PASS,evidence/tour-tests.txt
+10,Automated Node,2026-10-08,Photo without alt text is flagged,PASS: Photo without alt text is flagged,PASS,evidence/tour-tests.txt
+11,Automated Node,2026-10-08,usable() drops bad records only,PASS: usable() drops bad records only,PASS,evidence/tour-tests.txt
+12,Automated Node,2026-10-08,Every record in places.js is usable,PASS: Every record in places.js is usable,PASS,evidence/tour-tests.txt
+13,Automated Node,2026-10-08,Slow Tour uses six seconds instead of 0.8,PASS: Slow Tour uses six seconds instead of 0.8,PASS,evidence/feature-tests.txt
+14,Automated Node,2026-10-08,Three history stops are supplied,PASS: Three history stops are supplied,PASS,evidence/feature-tests.txt
+15,Automated Node,2026-10-08,Coordinate sources are HTTPS,PASS: Coordinate sources are HTTPS,PASS,evidence/feature-tests.txt
+16,Automated Node,2026-10-08,Missing date is rejected,PASS: Missing date is rejected,PASS,evidence/feature-tests.txt
+17,Automated Node,2026-10-08,Impossible date is rejected,PASS: Impossible date is rejected,PASS,evidence/feature-tests.txt
+18,Automated Node,2026-10-08,Unsafe source scheme is rejected,PASS: Unsafe source scheme is rejected,PASS,evidence/feature-tests.txt
+19,Automated Node,2026-10-08,Initial flight state is in northern Haiti,PASS: Initial flight state is in northern Haiti,PASS,evidence/feature-tests.txt
+20,Automated Node,2026-10-08,Nonfinite time cannot corrupt state,PASS: Nonfinite time cannot corrupt state,PASS,evidence/feature-tests.txt
+21,Automated Node,2026-10-08,ISPAN Ramiers DMS conversion preserves west longitude,PASS: ISPAN Ramiers DMS conversion preserves west longitude,PASS,evidence/feature-tests.txt
+22,Automated Node,2026-10-08,Normal camera response is under one second,PASS: Normal camera response is under one second,PASS,evidence/view-tests.txt
+23,Automated Node,2026-10-08,Slow Tour explicitly uses six seconds,PASS: Slow Tour explicitly uses six seconds,PASS,evidence/view-tests.txt
+24,Automated Node,2026-10-08,Reduced motion overrides both camera speeds,PASS: Reduced motion overrides both camera speeds,PASS,evidence/view-tests.txt
+25,Automated Node,2026-10-08,Citadelle camera frames the landmark closely,PASS: Citadelle camera frames the landmark closely,PASS,evidence/view-tests.txt
+26,Automated Node,2026-10-08,Palace camera frames the landmark closely,PASS: Palace camera frames the landmark closely,PASS,evidence/view-tests.txt
+27,Automated Node,2026-10-08,Ramiers has its own landmark close-up,PASS: Ramiers has its own landmark close-up,PASS,evidence/view-tests.txt
+28,Automated Node,2026-10-08,Imagery preview bounds contain selected coordinate,PASS: Imagery preview bounds contain selected coordinate,PASS,evidence/view-tests.txt
+29,Automated Node,2026-10-08,Imagery preview explicitly uses geographic coordinates,PASS: Imagery preview explicitly uses geographic coordinates,PASS,evidence/view-tests.txt
+30,Automated Node,2026-10-08,Invalid preview coordinates fall back to Citadelle,PASS: Invalid preview coordinates fall back to Citadelle,PASS,evidence/view-tests.txt
+31,Automated Node,2026-10-08,Idle map uses request-render mode,PASS: Idle map uses request-render mode,PASS,evidence/view-tests.txt
+32,Automated Node,2026-10-08,GPU work is capped at 30 FPS and no shadows,PASS: GPU work is capped at 30 FPS and no shadows,PASS,evidence/view-tests.txt
+33,Automated Node,2026-10-08,Satellite and terrain use HTTPS services,PASS: Satellite and terrain use HTTPS services,PASS,evidence/view-tests.txt
+34,Automated Node,2026-10-08,Idle tour schedules no flight animation callbacks,PASS: Idle tour schedules no flight animation callbacks,PASS,evidence/ui-logic-tests.txt
+35,Automated Node,2026-10-08,Viewer enables explicit rendering and 30 FPS cap,PASS: Viewer enables explicit rendering and 30 FPS cap,PASS,evidence/ui-logic-tests.txt
+36,Automated Node,2026-10-08,Satellite failure shows preview and disables flight honestly,PASS: Satellite failure shows preview and disables flight honestly,PASS,evidence/ui-logic-tests.txt
+37,Automated Node,2026-10-08,Next and Previous update details and wrap,PASS: Next and Previous update details and wrap,PASS,evidence/ui-logic-tests.txt
+38,Automated Node,2026-10-08,Slow Tour only changes future camera duration,PASS: Slow Tour only changes future camera duration,PASS,evidence/ui-logic-tests.txt
+39,Automated Node,2026-10-08,Reduced motion skips transitions,PASS: Reduced motion skips transitions,PASS,evidence/ui-logic-tests.txt
+40,Automated Node,2026-10-08,Missing source warns and excludes incomplete stop,PASS: Missing source warns and excludes incomplete stop,PASS,evidence/ui-logic-tests.txt
+41,Automated Node,2026-10-08,Empty data disables navigation safely,PASS: Empty data disables navigation safely,PASS,evidence/ui-logic-tests.txt
+42,Automated Node,2026-10-08,HTML-like names remain text,PASS: HTML-like names remain text,PASS,evidence/ui-logic-tests.txt
+43,Automated Node,2026-10-08,Flight starts paused at selected stop,PASS: Flight starts paused at selected stop,PASS,evidence/ui-logic-tests.txt
+44,Automated Node,2026-10-08,Flight runs on demand; Pause cancels queued callback,PASS: Flight runs on demand; Pause cancels queued callback,PASS,evidence/ui-logic-tests.txt
+45,Automated Node,2026-10-08,Flight HUD is throttled and sliders are not rewritten per frame,PASS: Flight HUD is throttled and sliders are not rewritten per frame,PASS,evidence/ui-logic-tests.txt
+46,Automated Node,2026-10-08,Touch turn buttons and Reset work,PASS: Touch turn buttons and Reset work,PASS,evidence/ui-logic-tests.txt
+47,Automated Node,2026-10-08,Returning to tour or hiding tab pauses flight,PASS: Returning to tour or hiding tab pauses flight,PASS,evidence/ui-logic-tests.txt
+48,Automated Node,2026-10-08,Mobile defaults to lighter graphics,PASS: Mobile defaults to lighter graphics,PASS,evidence/ui-logic-tests.txt
+RV,Ramiers verification,2026-10-08,Original ISPAN DMS agrees with third stop,Original PDF inspected; DMS conversion matches,PASS,evidence/ramiers-verification.txt
+RB,Revised live browser recheck,2026-10-08,Complete live integration run,Aborted at final terrain screenshot; Ramiers satellite screenshot did not show loaded imagery,INCOMPLETE,evidence/ramiers-live-browser.txt
+RS1,Revised browser smoke,2026-10-08,Bundled real Cesium starts,Bundled real Cesium starts observed,PASS,evidence/ramiers-browser-smoke.json
+RS2,Revised browser smoke,2026-10-08,Ramiers navigation updates stop,Ramiers navigation updates stop observed,PASS,evidence/ramiers-browser-smoke.json
+RS3,Revised browser smoke,2026-10-08,Verified Ramiers coordinates and camera range,Verified Ramiers coordinates and camera range observed,PASS,evidence/ramiers-browser-smoke.json
+RS4,Revised browser smoke,2026-10-08,Phone has no horizontal overflow,Phone has no horizontal overflow observed,PASS,evidence/ramiers-browser-smoke.json
+RS5,Revised browser smoke,2026-10-08,All 40 browser rules pass,All 40 browser rules pass observed,PASS,evidence/ramiers-browser-smoke.json

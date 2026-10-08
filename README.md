@@ -41,7 +41,7 @@ Keep the terminal open and visit `http://localhost:8000/index.html`, then `http:
 
 Satellite imagery shows actual roofs, vegetation, and land at the stop coordinates; elevation can give the landscape a 3D shape. These layers **do not contain detailed, photorealistic monument meshes**. No downloaded 3D scans of the Citadelle or Sans-Souci are included. Imagery resolution/date and elevation accuracy depend on the upstream services. The flight is spherical camera movement, not aircraft physics, travel advice, or collision simulation. Heights are above the ellipsoid, not guaranteed clearance above local terrain.
 
-The third stop is a **National History Park overview**, using UNESCO’s property reference point. It is not a fabricated Ramiers coordinate. The historical records and their 2026-10-05 source checks are retained. The rebuilt services were checked on 2026-10-08 UTC. Follow each stop’s source links before sharing.
+The third stop is **Fortifications of Ramiers**, using the site reference printed on page 6 of ISPAN Bulletin No. 29. Its coordinates and historical description were checked on 2026-10-08. All positions are approximate. Follow each source link before sharing.
 
 ## Pitch
 
@@ -81,3 +81,5 @@ Imagery and elevation credits remain visible inside the Cesium view. External se
 ## Browser-test reproduction (optional developer step)
 
 The main site needs no npm packages. To reproduce the browser verification script, install Playwright separately (`npm install --no-save playwright`, then `npx playwright install chromium`) and run `node verification/browser-tests.js`. Python 3 is required only if you deliberately enable its container network relay. The verification script creates a local test server and does not publish the site.
+
+Cesium startup first uses the bundled vendor folder, then retries the official pinned 1.145 CDN if that upload is missing. Both can fail if blocked; the app reports the attempted locations. Upload the whole vendor folder alongside index.html for reliable local assets.
