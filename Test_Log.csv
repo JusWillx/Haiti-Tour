@@ -1,0 +1,64 @@
+ID,Check_Type,Date,Expected_Result,Actual_Result,Status,Evidence
+T01,Automated Node,2026-10-05,Next moves forward,PASS: Next moves forward,PASS,evidence/tour-tests.txt
+T02,Automated Node,2026-10-05,Next wraps from the last stop to the first,PASS: Next wraps from the last stop to the first,PASS,evidence/tour-tests.txt
+T03,Automated Node,2026-10-05,Previous wraps from the first stop to the last,PASS: Previous wraps from the first stop to the last,PASS,evidence/tour-tests.txt
+T04,Automated Node,2026-10-05,Empty list does not crash,PASS: Empty list does not crash,PASS,evidence/tour-tests.txt
+T05,Automated Node,2026-10-05,A complete record is usable,PASS: A complete record is usable,PASS,evidence/tour-tests.txt
+T06,Automated Node,2026-10-05,"Missing longitude is flagged, not guessed","PASS: Missing longitude is flagged, not guessed",PASS,evidence/tour-tests.txt
+T07,Automated Node,2026-10-05,Longitude 200 is out of range,PASS: Longitude 200 is out of range,PASS,evidence/tour-tests.txt
+T08,Automated Node,2026-10-05,Swapped longitude/latitude is caught,PASS: Swapped longitude/latitude is caught,PASS,evidence/tour-tests.txt
+T09,Automated Node,2026-10-05,Missing source is flagged,PASS: Missing source is flagged,PASS,evidence/tour-tests.txt
+T10,Automated Node,2026-10-05,Photo without alt text is flagged,PASS: Photo without alt text is flagged,PASS,evidence/tour-tests.txt
+T11,Automated Node,2026-10-05,usable() drops bad records only,PASS: usable() drops bad records only,PASS,evidence/tour-tests.txt
+T12,Automated Node,2026-10-05,Every record in places.js is usable,PASS: Every record in places.js is usable,PASS,evidence/tour-tests.txt
+X01,Automated Node,2026-10-05,Slow Tour uses six seconds instead of two,PASS: Slow Tour uses six seconds instead of two,PASS,evidence/feature-tests.txt
+X02,Automated Node,2026-10-05,Three history stops are supplied,PASS: Three history stops are supplied,PASS,evidence/feature-tests.txt
+X03,Automated Node,2026-10-05,Coordinate sources are HTTPS,PASS: Coordinate sources are HTTPS,PASS,evidence/feature-tests.txt
+X04,Automated Node,2026-10-05,Missing date is rejected,PASS: Missing date is rejected,PASS,evidence/feature-tests.txt
+X05,Automated Node,2026-10-05,Impossible date is rejected,PASS: Impossible date is rejected,PASS,evidence/feature-tests.txt
+X06,Automated Node,2026-10-05,Unsafe source scheme is rejected,PASS: Unsafe source scheme is rejected,PASS,evidence/feature-tests.txt
+X07,Automated Node,2026-10-05,Initial flight state is in northern Haiti,PASS: Initial flight state is in northern Haiti,PASS,evidence/feature-tests.txt
+X08,Automated Node,2026-10-05,Nonfinite time cannot corrupt state,PASS: Nonfinite time cannot corrupt state,PASS,evidence/feature-tests.txt
+X09,Automated Node,2026-10-05,UNESCO reference DMS conversion preserves longitude sign,PASS: UNESCO reference DMS conversion preserves longitude sign,PASS,evidence/feature-tests.txt
+U01,Automated DOM/Cesium doubles,2026-10-05,Original starter fallback initializes first stop,PASS: Original starter fallback initializes first stop,PASS,evidence/ui-logic-tests.txt
+U02,Automated DOM/Cesium doubles,2026-10-05,No-Cesium fallback shows history and coordinate plot,PASS: No-Cesium fallback shows history and coordinate plot,PASS,evidence/ui-logic-tests.txt
+U03,Automated DOM/Cesium doubles,2026-10-05,Next and Previous update details and wrap,PASS: Next and Previous update details and wrap,PASS,evidence/ui-logic-tests.txt
+U04,Automated DOM/Cesium doubles,2026-10-05,Slow Tour updates accessible button and flyTo duration,PASS: Slow Tour updates accessible button and flyTo duration,PASS,evidence/ui-logic-tests.txt
+U05,Automated DOM/Cesium doubles,2026-10-05,Missing source warning excludes stop,PASS: Missing source warning excludes stop,PASS,evidence/ui-logic-tests.txt
+U06,Automated DOM/Cesium doubles,2026-10-05,Empty data disables navigation safely,PASS: Empty data disables navigation safely,PASS,evidence/ui-logic-tests.txt
+U07,Automated DOM/Cesium doubles,2026-10-05,HTML-like data is displayed as text,PASS: HTML-like data is displayed as text,PASS,evidence/ui-logic-tests.txt
+U08,Automated DOM/Cesium doubles,2026-10-05,Flight mode starts paused at selected stop; Reset restores it,PASS: Flight mode starts paused at selected stop; Reset restores it,PASS,evidence/ui-logic-tests.txt
+U09,Automated DOM/Cesium doubles,2026-10-05,Frame integration advances flight; returning to tour pauses it,PASS: Frame integration advances flight; returning to tour pauses it,PASS,evidence/ui-logic-tests.txt
+U10,Automated DOM/Cesium doubles,2026-10-05,Keyboard heading wraps and background visibility pauses,PASS: Keyboard heading wraps and background visibility pauses,PASS,evidence/ui-logic-tests.txt
+B01,Automated Node,2026-10-05,Next moves forward,PASS: Next moves forward,PASS,evidence/original-tests.txt
+B02,Automated Node,2026-10-05,Next wraps from the last stop to the first,PASS: Next wraps from the last stop to the first,PASS,evidence/original-tests.txt
+B03,Automated Node,2026-10-05,Previous wraps from the first stop to the last,PASS: Previous wraps from the first stop to the last,PASS,evidence/original-tests.txt
+B04,Automated Node,2026-10-05,Empty list does not crash,PASS: Empty list does not crash,PASS,evidence/original-tests.txt
+B05,Automated Node,2026-10-05,A complete record is usable,PASS: A complete record is usable,PASS,evidence/original-tests.txt
+B06,Automated Node,2026-10-05,"Missing longitude is flagged, not guessed","PASS: Missing longitude is flagged, not guessed",PASS,evidence/original-tests.txt
+B07,Automated Node,2026-10-05,Longitude 200 is out of range,PASS: Longitude 200 is out of range,PASS,evidence/original-tests.txt
+B08,Automated Node,2026-10-05,Swapped longitude/latitude is caught,PASS: Swapped longitude/latitude is caught,PASS,evidence/original-tests.txt
+B09,Automated Node,2026-10-05,Missing source is flagged,PASS: Missing source is flagged,PASS,evidence/original-tests.txt
+B10,Automated Node,2026-10-05,Photo without alt text is flagged,PASS: Photo without alt text is flagged,PASS,evidence/original-tests.txt
+B11,Automated Node,2026-10-05,usable() drops bad records only,PASS: usable() drops bad records only,PASS,evidence/original-tests.txt
+B12,Automated Node,2026-10-05,Every record in places.js is usable,PASS: Every record in places.js is usable,PASS,evidence/original-tests.txt
+F01,Automated Node,2026-10-05,Pause preserves position,pass: true,PASS,evidence/flight-tests.txt
+F02,Automated Node,2026-10-05,North increases latitude,pass: true,PASS,evidence/flight-tests.txt
+F03,Automated Node,2026-10-05,East increases longitude,pass: true,PASS,evidence/flight-tests.txt
+F04,Automated Node,2026-10-05,Heading wraps in both directions,pass: true,PASS,evidence/flight-tests.txt
+F05,Automated Node,2026-10-05,Height limits clamp,pass: true,PASS,evidence/flight-tests.txt
+F06,Automated Node,2026-10-05,Zero speed keeps position,pass: true,PASS,evidence/flight-tests.txt
+F07,Automated Node,2026-10-05,Duration consistency: one second equals ten 0.1-second steps,pass: true,PASS,evidence/flight-tests.txt
+R01,Intentional break,2026-10-05,Missing source warning; incomplete record excluded,Validator: missing source; UI-double confirms exclusion,PASS,evidence/break-and-repair.txt; evidence/ui-logic-tests.txt
+R02,Intentional break,2026-10-05,Every record test fails,Exit 1; FAIL: Every record in places.js is usable,PASS (EXPECTED FAILURE),evidence/break-and-repair.txt
+R03,Repair,2026-10-05,Restore source; all 12 pass; bytes equal original,Exit 0; 12 PASS; restored bytes equal original true,PASS,evidence/break-and-repair.txt
+M1,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Original and modified page render,Not run in browser; code-level fallback checkpoint only,PENDING,Manual_Checks.md; evidence/environment.txt
+M2,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Navigation wraps and markers/details agree,Not run in browser; logic tests passed separately,PENDING,Manual_Checks.md; evidence/environment.txt
+M3,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,All source links and dates are visible and correct,Not observed in browser; records source-checked,PENDING,Manual_Checks.md; evidence/environment.txt
+M4,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Slow Tour 6s vs 2s; reduced motion immediate,Real animation not observed; API options checked with doubles,PENDING,Manual_Checks.md; evidence/environment.txt
+M5,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,"Browser missing-data warning, test failure, restoration",Node-copy exercise performed; browser screenshots pending,PENDING,Manual_Checks.md; evidence/environment.txt
+M6,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Mobile/keyboard layout and no-WebGL fallback usable,No real layout/accessibility inspection; fallback logic checked,PENDING,Manual_Checks.md; evidence/environment.txt
+HTML,Browser tests.html,2026-10-05,12 Tour + 7 Flight + 9 feature pass visibly,Node suites passed; tests.html not opened successfully,PENDING,tests.html; evidence/environment.txt
+PARTNER,Partner reproduction,2026-10-05,Partner follows README; one feedback improvement recorded,No partner review performed,PENDING,Partner_Review.md
+WARMUP,Canvas page 4,2026-10-05,Complete Code Warm-Up,Page 4 not attached; student must complete,PENDING,Submission_Checklist.md
+HTTP,HTTP delivery,2026-10-05,All 11 requested local assets return 200,All 11 return 200; no rendering asserted,PASS,evidence/http-check.txt
