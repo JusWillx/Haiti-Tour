@@ -1,30 +1,38 @@
-# Source verification — checked 2026-10-05
+# Sources and verification
 
-## History
+## Historical facts — checked 2026-10-05
 
-UNESCO World Heritage Centre, National History Park – Citadel, Sans Souci, Ramiers:
-https://whc.unesco.org/en/list/180/
+UNESCO World Heritage Centre: https://whc.unesco.org/en/list/180/
 
-The descriptions paraphrase UNESCO’s account. Checked: Haiti’s 1804 independence and the fortress commission; Sans-Souci’s royal/administrative role, inauguration in 1813, and damage in the 1842 earthquake; the park’s component sites and 1982 World Heritage inscription. UNESCO provides an institutional account, not every historical perspective. Avoid unsourced claims about current opening hours, entry fees, safety, or access.
+Checked: the 1804 independence context and fortress commission; Sans-Souci’s royal and administrative role, 1813 inauguration, and 1842 earthquake damage; the National History Park’s component sites and its 1982 inscription. The stop descriptions paraphrase this institutional account. No current access, opening hours, fees, or travel-safety claims are included.
 
-## Coordinates
+## Geographic records — checked 2026-10-05
 
-| Stop | Source | Longitude, latitude | Care taken |
+| Stop | Coordinate source | Longitude, latitude | Limitation |
 |---|---|---|---|
-| Citadelle | https://www.geonames.org/3723098/citadelle-laferriere.html | -72.24336, 19.57333 | Published gazetteer location. Retrieved search result supplied coordinates; direct page opening failed. Approximate, not surveyed. |
-| Sans-Souci | https://www.wikidata.org/wiki/Q930795 | -72.2185972222, 19.6046916667 | DMS: 19°36′16.89″ N, 72°13′6.95″ W. The statement is imported from German Wikipedia; do not treat it as an independent survey. |
-| Park overview | https://whc.unesco.org/en/list/180/maps/ | -72.2342680556, 19.573025 | DMS: N19 34 22.89, W72 14 3.365. A property reference point, not a Ramiers marker or entrance. |
+| Citadelle | https://www.geonames.org/3723098/citadelle-laferriere.html | -72.24336, 19.57333 | Gazetteer approximation; retrieved search result, direct opening unavailable. Not a surveyed entrance. |
+| Sans-Souci | https://www.wikidata.org/wiki/Q930795 | -72.2185972222, 19.6046916667 | Coordinate imported from German Wikipedia; approximate, not independently surveyed. |
+| Park overview | https://whc.unesco.org/en/list/180/maps/ | -72.2342680556, 19.573025 | UNESCO property reference, not a Ramiers monument or entrance. |
 
-Conversion: degrees + minutes/60 + seconds/3600; west longitude is negative. Cesium receives longitude first. The sources’ labels and northern-Haiti region were checked. These checks do not establish survey precision or safe travel routes.
+DMS conversion: degrees + minutes/60 + seconds/3600. West longitude is negative, and Cesium receives longitude first. The palace source gives N19 36 16.89, W72 13 6.95. UNESCO’s property point gives N19 34 22.89, W72 14 3.365. The region box is a coarse validation aid, not a Haiti boundary or proof of precision.
 
-## API claim
+## Imagery/elevation — checked 2026-10-08 UTC
 
-Cesium Camera.flyTo documentation:
-https://cesium.com/learn/cesiumjs/ref-doc/Camera.html#flyTo
+Satellite: https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer
 
-The official API defines `duration` in seconds. The Slow Tour implementation changes duration from 2 to 6. The added pure-function and UI-double tests confirm the supplied options. Actual WebGL animation has not been observed here.
+Terrain: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
 
-Cesium Cartesian3.fromDegrees:
-https://cesium.com/learn/cesiumjs/ref-doc/Cartesian3.html#fromDegrees
+Both metadata responses returned HTTP 200 with valid tileInfo and no error field. A satellite tile at the Citadelle and actual binary elevation tiles at levels 12 and 14 were retrieved. Raw metadata and browser results are in evidence/. Public service access required no token in these checks; availability is not guaranteed permanently. Credits remain visible in the viewer. Imagery age/resolution and elevation accuracy come from the services.
 
-Cesium Viewer/GridImageryProvider/EllipsoidTerrainProvider follow the supplied starter. CDN version 1.145 is retained, not upgraded; CDN delivery itself remains unverified in this environment. No ion token or private credentials were introduced.
+The initial view uses cached satellite tiles through UrlTemplateImageryProvider. Wider ArcGIS tiles are requested when exploring or entering Flight mode. 3D mountain elevation is requested only when the user enables it. Satellite/elevation data do not provide photorealistic monument meshes; no licensed monument scan is bundled.
+
+## Official API documentation checked
+
+- https://cesium.com/learn/cesiumjs/ref-doc/UrlTemplateImageryProvider.html
+- https://cesium.com/learn/cesiumjs/ref-doc/ArcGisMapServerImageryProvider.html
+- https://cesium.com/learn/cesiumjs/ref-doc/ArcGISTiledElevationTerrainProvider.html
+- https://cesium.com/learn/cesiumjs/ref-doc/Viewer.html
+- https://cesium.com/learn/cesiumjs/ref-doc/Camera.html#flyToBoundingSphere
+- https://cesium.com/learn/cesiumjs/ref-doc/Cartesian3.html#fromDegrees
+
+Camera duration is in seconds: normal 0.8, Slow Tour 6, reduced motion 0. Runtime version 1.145.0 was confirmed in its header and live browser. Rendering only on demand and reducing resolution are supported Viewer options; these changes do not guarantee a specific frame rate on every device.

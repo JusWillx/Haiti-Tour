@@ -1,64 +1,89 @@
 ID,Check_Type,Date,Expected_Result,Actual_Result,Status,Evidence
-T01,Automated Node,2026-10-05,Next moves forward,PASS: Next moves forward,PASS,evidence/tour-tests.txt
-T02,Automated Node,2026-10-05,Next wraps from the last stop to the first,PASS: Next wraps from the last stop to the first,PASS,evidence/tour-tests.txt
-T03,Automated Node,2026-10-05,Previous wraps from the first stop to the last,PASS: Previous wraps from the first stop to the last,PASS,evidence/tour-tests.txt
-T04,Automated Node,2026-10-05,Empty list does not crash,PASS: Empty list does not crash,PASS,evidence/tour-tests.txt
-T05,Automated Node,2026-10-05,A complete record is usable,PASS: A complete record is usable,PASS,evidence/tour-tests.txt
-T06,Automated Node,2026-10-05,"Missing longitude is flagged, not guessed","PASS: Missing longitude is flagged, not guessed",PASS,evidence/tour-tests.txt
-T07,Automated Node,2026-10-05,Longitude 200 is out of range,PASS: Longitude 200 is out of range,PASS,evidence/tour-tests.txt
-T08,Automated Node,2026-10-05,Swapped longitude/latitude is caught,PASS: Swapped longitude/latitude is caught,PASS,evidence/tour-tests.txt
-T09,Automated Node,2026-10-05,Missing source is flagged,PASS: Missing source is flagged,PASS,evidence/tour-tests.txt
-T10,Automated Node,2026-10-05,Photo without alt text is flagged,PASS: Photo without alt text is flagged,PASS,evidence/tour-tests.txt
-T11,Automated Node,2026-10-05,usable() drops bad records only,PASS: usable() drops bad records only,PASS,evidence/tour-tests.txt
-T12,Automated Node,2026-10-05,Every record in places.js is usable,PASS: Every record in places.js is usable,PASS,evidence/tour-tests.txt
-X01,Automated Node,2026-10-05,Slow Tour uses six seconds instead of two,PASS: Slow Tour uses six seconds instead of two,PASS,evidence/feature-tests.txt
-X02,Automated Node,2026-10-05,Three history stops are supplied,PASS: Three history stops are supplied,PASS,evidence/feature-tests.txt
-X03,Automated Node,2026-10-05,Coordinate sources are HTTPS,PASS: Coordinate sources are HTTPS,PASS,evidence/feature-tests.txt
-X04,Automated Node,2026-10-05,Missing date is rejected,PASS: Missing date is rejected,PASS,evidence/feature-tests.txt
-X05,Automated Node,2026-10-05,Impossible date is rejected,PASS: Impossible date is rejected,PASS,evidence/feature-tests.txt
-X06,Automated Node,2026-10-05,Unsafe source scheme is rejected,PASS: Unsafe source scheme is rejected,PASS,evidence/feature-tests.txt
-X07,Automated Node,2026-10-05,Initial flight state is in northern Haiti,PASS: Initial flight state is in northern Haiti,PASS,evidence/feature-tests.txt
-X08,Automated Node,2026-10-05,Nonfinite time cannot corrupt state,PASS: Nonfinite time cannot corrupt state,PASS,evidence/feature-tests.txt
-X09,Automated Node,2026-10-05,UNESCO reference DMS conversion preserves longitude sign,PASS: UNESCO reference DMS conversion preserves longitude sign,PASS,evidence/feature-tests.txt
-U01,Automated DOM/Cesium doubles,2026-10-05,Original starter fallback initializes first stop,PASS: Original starter fallback initializes first stop,PASS,evidence/ui-logic-tests.txt
-U02,Automated DOM/Cesium doubles,2026-10-05,No-Cesium fallback shows history and coordinate plot,PASS: No-Cesium fallback shows history and coordinate plot,PASS,evidence/ui-logic-tests.txt
-U03,Automated DOM/Cesium doubles,2026-10-05,Next and Previous update details and wrap,PASS: Next and Previous update details and wrap,PASS,evidence/ui-logic-tests.txt
-U04,Automated DOM/Cesium doubles,2026-10-05,Slow Tour updates accessible button and flyTo duration,PASS: Slow Tour updates accessible button and flyTo duration,PASS,evidence/ui-logic-tests.txt
-U05,Automated DOM/Cesium doubles,2026-10-05,Missing source warning excludes stop,PASS: Missing source warning excludes stop,PASS,evidence/ui-logic-tests.txt
-U06,Automated DOM/Cesium doubles,2026-10-05,Empty data disables navigation safely,PASS: Empty data disables navigation safely,PASS,evidence/ui-logic-tests.txt
-U07,Automated DOM/Cesium doubles,2026-10-05,HTML-like data is displayed as text,PASS: HTML-like data is displayed as text,PASS,evidence/ui-logic-tests.txt
-U08,Automated DOM/Cesium doubles,2026-10-05,Flight mode starts paused at selected stop; Reset restores it,PASS: Flight mode starts paused at selected stop; Reset restores it,PASS,evidence/ui-logic-tests.txt
-U09,Automated DOM/Cesium doubles,2026-10-05,Frame integration advances flight; returning to tour pauses it,PASS: Frame integration advances flight; returning to tour pauses it,PASS,evidence/ui-logic-tests.txt
-U10,Automated DOM/Cesium doubles,2026-10-05,Keyboard heading wraps and background visibility pauses,PASS: Keyboard heading wraps and background visibility pauses,PASS,evidence/ui-logic-tests.txt
-B01,Automated Node,2026-10-05,Next moves forward,PASS: Next moves forward,PASS,evidence/original-tests.txt
-B02,Automated Node,2026-10-05,Next wraps from the last stop to the first,PASS: Next wraps from the last stop to the first,PASS,evidence/original-tests.txt
-B03,Automated Node,2026-10-05,Previous wraps from the first stop to the last,PASS: Previous wraps from the first stop to the last,PASS,evidence/original-tests.txt
-B04,Automated Node,2026-10-05,Empty list does not crash,PASS: Empty list does not crash,PASS,evidence/original-tests.txt
-B05,Automated Node,2026-10-05,A complete record is usable,PASS: A complete record is usable,PASS,evidence/original-tests.txt
-B06,Automated Node,2026-10-05,"Missing longitude is flagged, not guessed","PASS: Missing longitude is flagged, not guessed",PASS,evidence/original-tests.txt
-B07,Automated Node,2026-10-05,Longitude 200 is out of range,PASS: Longitude 200 is out of range,PASS,evidence/original-tests.txt
-B08,Automated Node,2026-10-05,Swapped longitude/latitude is caught,PASS: Swapped longitude/latitude is caught,PASS,evidence/original-tests.txt
-B09,Automated Node,2026-10-05,Missing source is flagged,PASS: Missing source is flagged,PASS,evidence/original-tests.txt
-B10,Automated Node,2026-10-05,Photo without alt text is flagged,PASS: Photo without alt text is flagged,PASS,evidence/original-tests.txt
-B11,Automated Node,2026-10-05,usable() drops bad records only,PASS: usable() drops bad records only,PASS,evidence/original-tests.txt
-B12,Automated Node,2026-10-05,Every record in places.js is usable,PASS: Every record in places.js is usable,PASS,evidence/original-tests.txt
-F01,Automated Node,2026-10-05,Pause preserves position,pass: true,PASS,evidence/flight-tests.txt
-F02,Automated Node,2026-10-05,North increases latitude,pass: true,PASS,evidence/flight-tests.txt
-F03,Automated Node,2026-10-05,East increases longitude,pass: true,PASS,evidence/flight-tests.txt
-F04,Automated Node,2026-10-05,Heading wraps in both directions,pass: true,PASS,evidence/flight-tests.txt
-F05,Automated Node,2026-10-05,Height limits clamp,pass: true,PASS,evidence/flight-tests.txt
-F06,Automated Node,2026-10-05,Zero speed keeps position,pass: true,PASS,evidence/flight-tests.txt
-F07,Automated Node,2026-10-05,Duration consistency: one second equals ten 0.1-second steps,pass: true,PASS,evidence/flight-tests.txt
-R01,Intentional break,2026-10-05,Missing source warning; incomplete record excluded,Validator: missing source; UI-double confirms exclusion,PASS,evidence/break-and-repair.txt; evidence/ui-logic-tests.txt
-R02,Intentional break,2026-10-05,Every record test fails,Exit 1; FAIL: Every record in places.js is usable,PASS (EXPECTED FAILURE),evidence/break-and-repair.txt
-R03,Repair,2026-10-05,Restore source; all 12 pass; bytes equal original,Exit 0; 12 PASS; restored bytes equal original true,PASS,evidence/break-and-repair.txt
-M1,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Original and modified page render,Not run in browser; code-level fallback checkpoint only,PENDING,Manual_Checks.md; evidence/environment.txt
-M2,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Navigation wraps and markers/details agree,Not run in browser; logic tests passed separately,PENDING,Manual_Checks.md; evidence/environment.txt
-M3,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,All source links and dates are visible and correct,Not observed in browser; records source-checked,PENDING,Manual_Checks.md; evidence/environment.txt
-M4,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Slow Tour 6s vs 2s; reduced motion immediate,Real animation not observed; API options checked with doubles,PENDING,Manual_Checks.md; evidence/environment.txt
-M5,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,"Browser missing-data warning, test failure, restoration",Node-copy exercise performed; browser screenshots pending,PENDING,Manual_Checks.md; evidence/environment.txt
-M6,"Manual browser — proposed, reconcile Canvas page 6",2026-10-05,Mobile/keyboard layout and no-WebGL fallback usable,No real layout/accessibility inspection; fallback logic checked,PENDING,Manual_Checks.md; evidence/environment.txt
-HTML,Browser tests.html,2026-10-05,12 Tour + 7 Flight + 9 feature pass visibly,Node suites passed; tests.html not opened successfully,PENDING,tests.html; evidence/environment.txt
-PARTNER,Partner reproduction,2026-10-05,Partner follows README; one feedback improvement recorded,No partner review performed,PENDING,Partner_Review.md
-WARMUP,Canvas page 4,2026-10-05,Complete Code Warm-Up,Page 4 not attached; student must complete,PENDING,Submission_Checklist.md
-HTTP,HTTP delivery,2026-10-05,All 11 requested local assets return 200,All 11 return 200; no rendering asserted,PASS,evidence/http-check.txt
+N1,Automated Node,2026-10-08,Next moves forward,PASS: Next moves forward,PASS,evidence/tour-tests.txt
+N2,Automated Node,2026-10-08,Next wraps from the last stop to the first,PASS: Next wraps from the last stop to the first,PASS,evidence/tour-tests.txt
+N3,Automated Node,2026-10-08,Previous wraps from the first stop to the last,PASS: Previous wraps from the first stop to the last,PASS,evidence/tour-tests.txt
+N4,Automated Node,2026-10-08,Empty list does not crash,PASS: Empty list does not crash,PASS,evidence/tour-tests.txt
+N5,Automated Node,2026-10-08,A complete record is usable,PASS: A complete record is usable,PASS,evidence/tour-tests.txt
+N6,Automated Node,2026-10-08,"Missing longitude is flagged, not guessed","PASS: Missing longitude is flagged, not guessed",PASS,evidence/tour-tests.txt
+N7,Automated Node,2026-10-08,Longitude 200 is out of range,PASS: Longitude 200 is out of range,PASS,evidence/tour-tests.txt
+N8,Automated Node,2026-10-08,Swapped longitude/latitude is caught,PASS: Swapped longitude/latitude is caught,PASS,evidence/tour-tests.txt
+N9,Automated Node,2026-10-08,Missing source is flagged,PASS: Missing source is flagged,PASS,evidence/tour-tests.txt
+N10,Automated Node,2026-10-08,Photo without alt text is flagged,PASS: Photo without alt text is flagged,PASS,evidence/tour-tests.txt
+N11,Automated Node,2026-10-08,usable() drops bad records only,PASS: usable() drops bad records only,PASS,evidence/tour-tests.txt
+N12,Automated Node,2026-10-08,Every record in places.js is usable,PASS: Every record in places.js is usable,PASS,evidence/tour-tests.txt
+N13,Automated Node,2026-10-08,Slow Tour uses six seconds instead of 0.8,PASS: Slow Tour uses six seconds instead of 0.8,PASS,evidence/feature-tests.txt
+N14,Automated Node,2026-10-08,Three history stops are supplied,PASS: Three history stops are supplied,PASS,evidence/feature-tests.txt
+N15,Automated Node,2026-10-08,Coordinate sources are HTTPS,PASS: Coordinate sources are HTTPS,PASS,evidence/feature-tests.txt
+N16,Automated Node,2026-10-08,Missing date is rejected,PASS: Missing date is rejected,PASS,evidence/feature-tests.txt
+N17,Automated Node,2026-10-08,Impossible date is rejected,PASS: Impossible date is rejected,PASS,evidence/feature-tests.txt
+N18,Automated Node,2026-10-08,Unsafe source scheme is rejected,PASS: Unsafe source scheme is rejected,PASS,evidence/feature-tests.txt
+N19,Automated Node,2026-10-08,Initial flight state is in northern Haiti,PASS: Initial flight state is in northern Haiti,PASS,evidence/feature-tests.txt
+N20,Automated Node,2026-10-08,Nonfinite time cannot corrupt state,PASS: Nonfinite time cannot corrupt state,PASS,evidence/feature-tests.txt
+N21,Automated Node,2026-10-08,UNESCO reference DMS conversion preserves longitude sign,PASS: UNESCO reference DMS conversion preserves longitude sign,PASS,evidence/feature-tests.txt
+N22,Automated Node,2026-10-08,Normal camera response is under one second,PASS: Normal camera response is under one second,PASS,evidence/view-tests.txt
+N23,Automated Node,2026-10-08,Slow Tour explicitly uses six seconds,PASS: Slow Tour explicitly uses six seconds,PASS,evidence/view-tests.txt
+N24,Automated Node,2026-10-08,Reduced motion overrides both camera speeds,PASS: Reduced motion overrides both camera speeds,PASS,evidence/view-tests.txt
+N25,Automated Node,2026-10-08,Citadelle camera frames the landmark closely,PASS: Citadelle camera frames the landmark closely,PASS,evidence/view-tests.txt
+N26,Automated Node,2026-10-08,Palace camera frames the landmark closely,PASS: Palace camera frames the landmark closely,PASS,evidence/view-tests.txt
+N27,Automated Node,2026-10-08,Park overview has a wider camera range,PASS: Park overview has a wider camera range,PASS,evidence/view-tests.txt
+N28,Automated Node,2026-10-08,Imagery preview bounds contain selected coordinate,PASS: Imagery preview bounds contain selected coordinate,PASS,evidence/view-tests.txt
+N29,Automated Node,2026-10-08,Imagery preview explicitly uses geographic coordinates,PASS: Imagery preview explicitly uses geographic coordinates,PASS,evidence/view-tests.txt
+N30,Automated Node,2026-10-08,Invalid preview coordinates fall back to Citadelle,PASS: Invalid preview coordinates fall back to Citadelle,PASS,evidence/view-tests.txt
+N31,Automated Node,2026-10-08,Idle map uses request-render mode,PASS: Idle map uses request-render mode,PASS,evidence/view-tests.txt
+N32,Automated Node,2026-10-08,GPU work is capped at 30 FPS and no shadows,PASS: GPU work is capped at 30 FPS and no shadows,PASS,evidence/view-tests.txt
+N33,Automated Node,2026-10-08,Satellite and terrain use HTTPS services,PASS: Satellite and terrain use HTTPS services,PASS,evidence/view-tests.txt
+N34,Automated Node,2026-10-08,Idle tour schedules no flight animation callbacks,PASS: Idle tour schedules no flight animation callbacks,PASS,evidence/ui-logic-tests.txt
+N35,Automated Node,2026-10-08,Viewer enables explicit rendering and 30 FPS cap,PASS: Viewer enables explicit rendering and 30 FPS cap,PASS,evidence/ui-logic-tests.txt
+N36,Automated Node,2026-10-08,Satellite failure shows preview and disables flight honestly,PASS: Satellite failure shows preview and disables flight honestly,PASS,evidence/ui-logic-tests.txt
+N37,Automated Node,2026-10-08,Next and Previous update details and wrap,PASS: Next and Previous update details and wrap,PASS,evidence/ui-logic-tests.txt
+N38,Automated Node,2026-10-08,Slow Tour only changes future camera duration,PASS: Slow Tour only changes future camera duration,PASS,evidence/ui-logic-tests.txt
+N39,Automated Node,2026-10-08,Reduced motion skips transitions,PASS: Reduced motion skips transitions,PASS,evidence/ui-logic-tests.txt
+N40,Automated Node,2026-10-08,Missing source warns and excludes incomplete stop,PASS: Missing source warns and excludes incomplete stop,PASS,evidence/ui-logic-tests.txt
+N41,Automated Node,2026-10-08,Empty data disables navigation safely,PASS: Empty data disables navigation safely,PASS,evidence/ui-logic-tests.txt
+N42,Automated Node,2026-10-08,HTML-like names remain text,PASS: HTML-like names remain text,PASS,evidence/ui-logic-tests.txt
+N43,Automated Node,2026-10-08,Flight starts paused at selected stop,PASS: Flight starts paused at selected stop,PASS,evidence/ui-logic-tests.txt
+N44,Automated Node,2026-10-08,Flight runs on demand; Pause cancels queued callback,PASS: Flight runs on demand; Pause cancels queued callback,PASS,evidence/ui-logic-tests.txt
+N45,Automated Node,2026-10-08,Flight HUD is throttled and sliders are not rewritten per frame,PASS: Flight HUD is throttled and sliders are not rewritten per frame,PASS,evidence/ui-logic-tests.txt
+N46,Automated Node,2026-10-08,Touch turn buttons and Reset work,PASS: Touch turn buttons and Reset work,PASS,evidence/ui-logic-tests.txt
+N47,Automated Node,2026-10-08,Returning to tour or hiding tab pauses flight,PASS: Returning to tour or hiding tab pauses flight,PASS,evidence/ui-logic-tests.txt
+N48,Automated Node,2026-10-08,Mobile defaults to lighter graphics,PASS: Mobile defaults to lighter graphics,PASS,evidence/ui-logic-tests.txt
+N49,Automated Node,2026-10-08,Pause preserves position,pass: true,PASS,evidence/flight-tests.txt
+N50,Automated Node,2026-10-08,North increases latitude,pass: true,PASS,evidence/flight-tests.txt
+N51,Automated Node,2026-10-08,East increases longitude,pass: true,PASS,evidence/flight-tests.txt
+N52,Automated Node,2026-10-08,Heading wraps in both directions,pass: true,PASS,evidence/flight-tests.txt
+N53,Automated Node,2026-10-08,Height limits clamp,pass: true,PASS,evidence/flight-tests.txt
+N54,Automated Node,2026-10-08,Zero speed keeps position,pass: true,PASS,evidence/flight-tests.txt
+N55,Automated Node,2026-10-08,Duration consistency: one second equals ten 0.1-second steps,pass: true,PASS,evidence/flight-tests.txt
+B1,Automated real browser,2026-10-08,Bundled Cesium 1.145.0 creates a real WebGL2 scene,Bundled Cesium 1.145.0 creates a real WebGL2 scene observed,PASS,evidence/browser-results.json
+B2,Automated real browser,2026-10-08,"Terrain is optional, keeping initial view lightweight","Terrain is optional, keeping initial view lightweight observed",PASS,evidence/browser-results.json
+B3,Automated real browser,2026-10-08,High-resolution satellite layer loads in Cesium,High-resolution satellite layer loads in Cesium observed,PASS,evidence/browser-results.json
+B4,Automated real browser,2026-10-08,No horizontal overflow on desktop,No horizontal overflow on desktop observed,PASS,evidence/browser-results.json
+B5,Automated real browser,2026-10-08,Tour detail updates immediately after clicking Next,Tour detail updates immediately after clicking Next observed,PASS,evidence/browser-results.json
+B6,Automated real browser,2026-10-08,Default camera transition is 0.8 seconds,Default camera transition is 0.8 seconds observed,PASS,evidence/browser-results.json
+B7,Automated real browser,2026-10-08,Previous wraps around first stop,Previous wraps around first stop observed,PASS,evidence/browser-results.json
+B8,Automated real browser,2026-10-08,Numbered landmark selection returns to Citadelle,Numbered landmark selection returns to Citadelle observed,PASS,evidence/browser-results.json
+B9,Automated real browser,2026-10-08,Slow Tour uses six seconds,Slow Tour uses six seconds observed,PASS,evidence/browser-results.json
+B10,Automated real browser,2026-10-08,OS reduced motion skips camera animation,OS reduced motion skips camera animation observed,PASS,evidence/browser-results.json
+B11,Automated real browser,2026-10-08,Tilt and overhead controls update active state,Tilt and overhead controls update active state observed,PASS,evidence/browser-results.json
+B12,Automated real browser,2026-10-08,Flight starts paused at selected stop,Flight starts paused at selected stop observed,PASS,evidence/browser-results.json
+B13,Automated real browser,2026-10-08,Start moves coordinates; Pause cancels movement,Start moves coordinates; Pause cancels movement observed,PASS,evidence/browser-results.json
+B14,Automated real browser,2026-10-08,"Touch flight turn, climb, and Reset work","Touch flight turn, climb, and Reset work observed",PASS,evidence/browser-results.json
+B15,Automated real browser,2026-10-08,Returning to History Tour pauses flight,Returning to History Tour pauses flight observed,PASS,evidence/browser-results.json
+B16,Automated real browser,2026-10-08,Idle tour does not update flight frames or HUD,Idle tour does not update flight frames or HUD observed,PASS,evidence/browser-results.json
+B17,Automated real browser,2026-10-08,Lighter graphics reduces render resolution,Lighter graphics reduces render resolution observed,PASS,evidence/browser-results.json
+B18,Automated real browser,2026-10-08,Phone layout has no horizontal overflow,Phone layout has no horizontal overflow observed,PASS,evidence/browser-results.json
+B19,Automated real browser,2026-10-08,Phone map appears above the tour controls,Phone map appears above the tour controls observed,PASS,evidence/browser-results.json
+B20,Automated real browser,2026-10-08,tests.html shows all 40 rule checks passing,tests.html shows all 40 rule checks passing observed,PASS,evidence/browser-results.json
+B21,Automated real browser,2026-10-08,Browser missing-data exercise exposes failing data test,Browser missing-data exercise exposes failing data test observed,PASS,evidence/browser-results.json
+B22,Automated real browser,2026-10-08,Browser warns and excludes the missing-source stop,Browser warns and excludes the missing-source stop observed,PASS,evidence/browser-results.json
+B23,Automated real browser,2026-10-08,Restoring source repairs all 40 browser rule checks,Restoring source repairs all 40 browser rule checks observed,PASS,evidence/browser-results.json
+B24,Automated real browser,2026-10-08,Engine failure gives an honest usable fallback,Engine failure gives an honest usable fallback observed,PASS,evidence/browser-results.json
+B25,Automated real browser,2026-10-08,3D Terrain toggle installs the actual elevation provider,3D Terrain toggle installs the actual elevation provider observed,PASS,evidence/browser-results.json
+B26,Automated real browser,2026-10-08,Rendered Citadelle terrain has nonzero mountain elevation,Rendered Citadelle terrain has nonzero mountain elevation observed,PASS,evidence/browser-results.json
+R1,Break exercise,2026-10-08,Missing source warns and causes data test failure,Expected warning and FAIL observed; source restored,PASS,evidence/break-and-repair.txt
+R2,Repair,2026-10-08,Restore exact source bytes and pass 12 Tour checks,Original bytes restored; all 12 pass,PASS,evidence/break-and-repair.txt
+D1,Initial browser diagnostic,2026-10-08,Terrain elevation appears within initial wait,Initial terrain observation timed out; retained failure evidence,FAIL,evidence/browser-initial-results.json
+D2,Upstream service,2026-10-08,All elevation requests succeed,One elevation tile returned HTTP 502; final elevation check still passed,WARNING,evidence/browser-results.json
+M1,Student manual checks,Pending,Perform six checks from Canvas page 6,Exact Canvas page and student demonstration not supplied,NOT RUN,Manual_Checks.md
+P1,Partner review,Pending,Partner follows README and reports improvement,Requires actual partner; no feedback invented,NOT RUN,Partner_Review.md
+O1,Original starter WebGL checkpoint,Pending,Record original starter successful browser checkpoint,Original rule checks preserved; original WebGL checkpoint not established,NOT RUN,evidence/original-tests.txt

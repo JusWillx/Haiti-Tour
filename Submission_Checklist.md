@@ -1,26 +1,24 @@
-# Submission status
+# Rebuilt V2 submission status
 
-## Included and completed
+## Included
 
-- Adapted Path B project with three sourced stop records and three description files.
-- Haitian flag blue/red/white interface; Slow Tour observable feature.
-- Optional practice-flight mode, clearly marked simulated.
-- Exact local run steps and pinned CesiumJS 1.145.
-- Original 12-check baseline results; code-level original fallback checkpoint.
-- 38 passing current automated checks, with console evidence.
-- Required Path B missing-source break/repair, failing test and restored pass.
-- Source/API verification notes; geographic limitations.
-- Test_Log.csv, three real-session AI excerpts, 150–250 word reflection draft.
+- Path B project adapted from the supplied Tour starter, with optional Flight starter movement.
+- Three cited stop records and three matching description files.
+- Haitian flag colors; real satellite imagery and elevation through Cesium; no grid in active app.
+- Optional Slow Tour feature, map tools, mobile layout, touch flight controls.
+- Bundled CesiumJS 1.145.0, run steps, GitHub Pages instructions, license and credits.
+- Updated automated checks and actual outcomes in Test_Log.csv/evidence/.
+- Required missing-data break and repair with expected failure and restoration.
+- AI excerpts, 150–250 word reflection draft, source/API verification notes.
 
-## Student/partner must finish
+## Student must complete or confirm
 
-- Complete the actual Canvas page 4 Code Warm-Up; it was not supplied here.
-- Observe and record the original starter’s first successful browser/WebGL checkpoint.
-- Compare the proposed six checks with actual Canvas page 6, then perform them.
-- Open tests.html in a browser and record observed results.
-- Capture browser warning/failure/repair evidence.
-- Have a real partner follow README; apply and record one improvement.
-- Review code, sources, AI excerpt choices, and reflection for your own understanding.
-- Check Canvas due date and whether your instructor requires publishing.
+- Actual Canvas page 4 Code Warm-Up, which was not supplied here.
+- Original starter’s first successful browser/WebGL checkpoint where required.
+- Instructor’s exact six manual checks from Canvas page 6.
+- Your own browser/device checks, including graphics performance on your machine.
+- Real partner reproduction, one feedback improvement, and Partner_Review.md.
+- Review code, sources, AI choices, reflection, and the assignment due date.
+- Replace the old files in your GitHub repository, wait for successful Pages deployment, and verify the published link shows V2.
 
-Publishing was optional in the supplied prompt; there is no working hosted link. Do not claim unperformed checks or partner feedback.
+The ZIP does not modify or publish your existing GitHub repository automatically. Rendering tests and network transport limits are described in evidence; no invented human tests or partner feedback are included.

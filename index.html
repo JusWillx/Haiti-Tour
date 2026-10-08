@@ -1,34 +1,42 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="A sourced Haiti history tour and educational flight simulation for cybersecurity students.">
-<title>Ayiti · History from Above</title>
-<link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.145/Build/Cesium/Widgets/widgets.css">
-<link rel="stylesheet" href="style.css"></head><body>
-<header><a class="brand" href="index.html">AYITI <span>HISTORY FROM ABOVE</span></a><a href="tests.html">Test console ↗</a></header>
-<main>
-<section class="intro"><p class="eyebrow">HAITI / MEMORY / INDEPENDENCE</p><h1>A journey through<br>freedom’s landmarks.</h1><p>Explore three stories in northern Haiti, then take the controls in a simulated flight. Trace the history. Check the evidence.</p></section>
-<div class="workspace">
-<aside aria-label="Tour and flight controls">
-<div class="tabs" role="group" aria-label="Experience"><button id="tourMode" aria-pressed="true">History tour</button><button id="flightMode" aria-pressed="false">Practice flight</button></div>
-<section id="tourPanel"><p id="count" class="eyebrow"></p><div id="stopList" class="stop-list"></div><p id="era" class="era"></p><h2 id="name"></h2><p id="desc"></p><p id="coords" class="small"></p>
-<div class="buttons"><button id="prev">← Previous</button><button id="next">Next stop →</button></div>
-<button id="slow" class="wide" aria-pressed="false">Slow Tour: off (2 seconds)</button>
-<details><summary>Check the evidence</summary><p id="source"></p><p id="coordinateNote" class="small"></p><p class="small">Cybersecurity connection: validate records, check provenance, and treat missing information as a warning.</p></details>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Explore Haiti's historical landmarks using real satellite imagery and elevation in CesiumJS.">
+<title>Ayiti · Haiti from Above</title>
+<link rel="stylesheet" href="vendor/cesium/widgets.css"><link rel="stylesheet" href="style.css?v=2">
+<script defer src="places.js"></script><script defer src="tour-core.js"></script><script defer src="flight-core.js"></script><script defer src="view-core.js"></script><script defer src="app.js?v=2"></script>
+</head>
+<body>
+<header class="app-header"><a href="index.html" class="brand">AYITI <span>HAITI FROM ABOVE</span></a><div class="header-right"><span class="version">REBUILT · V2</span><a href="tests.html">Test console ↗</a></div></header>
+<main class="app-layout">
+<aside class="sidebar" aria-label="History tour and flight controls">
+<div class="intro"><p class="eyebrow">HISTORY · HERITAGE · HAITI</p><h1>Explore the places.<br>Discover the stories.</h1><p class="intro-copy">Real satellite imagery. Optional 3D mountain terrain. Three perspectives on Haitian independence.</p></div>
+<div class="mode-tabs" aria-label="Experience"><button id="tourMode" aria-pressed="true">History tour</button><button id="flightMode" aria-pressed="false">Practice flight</button></div>
+<section id="tourPanel">
+<div class="count-row"><span id="count" class="eyebrow"></span><span class="location-tag">NORTHERN HAITI</span></div>
+<div id="stopList" class="stop-list" aria-label="Choose a tour stop"></div>
+<p id="era" class="era"></p><h2 id="name"></h2><p id="desc"></p><p id="coords" class="small"></p>
+<div class="navigation"><button id="prev" aria-label="Previous stop">← Previous</button><button id="next" class="primary">Next stop →</button></div>
+<button id="slow" class="wide" aria-pressed="false">Slow Tour: off</button>
+<details class="sources"><summary>History & coordinate sources</summary><div id="source"></div><p id="coordinateNote" class="small"></p><p class="small">Cybersecurity connection: validate inputs and check the origin of information before trusting it.</p></details>
 </section>
-<section id="flightPanel" hidden><p class="eyebrow">SIMULATED FLIGHT · NO AIRCRAFT PHYSICS</p><h2>Your turn to explore.</h2><p>Start at the selected stop. Turn, change speed, and adjust your simulated altitude.</p>
-<label>Heading <output id="headingOut">0°</output><input id="heading" type="range" min="0" max="359" value="0"></label>
-<label>Speed <output id="speedOut">70 m/s</output><input id="speed" type="range" min="0" max="150" value="70"></label>
-<label>Altitude above ellipsoid <output id="heightOut">2200 m</output><input id="height" type="range" min="500" max="5000" step="50" value="2200"></label>
-<div class="buttons"><button id="play">Start flight</button><button id="reset">Reset at stop</button></div>
-<p id="telemetry" class="telemetry" role="status"></p><p class="small">Arrow keys: turn / altitude. Space: pause. Keyboard controls work while the flight panel is active and focus is outside a form control.</p></section>
-<div id="problems" role="alert"></div>
+<section id="flightPanel" hidden><p class="eyebrow">SIMULATED FLIGHT</p><h2>Take the controls.</h2><p class="small">A simple camera-flight simulation, starting at your selected stop. No aircraft physics or collision detection.</p>
+<label for="heading">Heading <output id="headingOut">0°</output></label><input id="heading" type="range" min="0" max="359" value="0">
+<label for="speed">Speed <output id="speedOut">70 m/s</output></label><input id="speed" type="range" min="0" max="150" value="70">
+<label for="height">Height above ellipsoid <output id="heightOut">2200 m</output></label><input id="height" type="range" min="1200" max="5000" step="50" value="2200">
+<div class="navigation"><button id="play" class="primary">Start flight</button><button id="reset">Reset at stop</button></div>
+<div class="direction-pad" aria-label="Touch flight controls"><button id="turnLeft" aria-label="Turn left">↶ Left</button><button id="climb" aria-label="Climb">↑ Climb</button><button id="turnRight" aria-label="Turn right">Right ↷</button><button id="descend" aria-label="Descend">↓ Descend</button></div>
+<p id="telemetry" class="telemetry" role="status"></p><p class="small">Desktop: arrows turn or change height; Space pauses. On a phone, use the sliders and buttons.</p></section>
+<div id="problems" class="problems" role="alert"></div>
+<div class="sidebar-foot"><a href="README.md">Run instructions</a><span>CesiumJS 1.145 · Path B</span></div>
 </aside>
-<section class="map-panel" aria-label="Geographic visualization"><div class="map-top"><span>NORTHERN HAITI</span><span id="mapMode">3D GRID GLOBE</span></div><div id="globe"></div>
-<div id="fallback" hidden><p>3D view unavailable. Your history tour still works.</p><svg viewBox="0 0 600 400" role="img" aria-label="Coordinate plot of the three Haiti tour stops. Not a terrain or road map."><g id="fallbackMarkers"></g></svg><p class="small">Coordinate plot · north up · not a road or terrain map</p></div>
-<p id="message" role="status">Loading Cesium…</p><p class="map-note">Virtual camera journeys, not real routes. No terrain, satellite imagery, or buildings.</p></section>
-</div>
-<section class="context"><div><p class="eyebrow">THE PURPOSE</p><h2>History deserves evidence.</h2></div><p>Made for cybersecurity students and people interested in Haitian heritage. Every stop pairs a historical account with its source. A usable record is not proof of truth: follow the links, consider their limits, and verify before sharing.</p></section>
-</main><footer>PATH B · ADAPTED FROM TOUR LAB & FLIGHT LAB · CESIUMJS 1.145 <span>Educational simulation / source review: October 5, 2026</span></footer>
-<script src="https://cesium.com/downloads/cesiumjs/releases/1.145/Build/Cesium/Cesium.js"></script>
-<script src="places.js"></script><script src="tour-core.js"></script><script src="flight-core.js"></script><script src="app.js"></script>
+<section class="map-panel" aria-label="Interactive satellite and terrain view">
+<div id="globe" tabindex="0" aria-label="Cesium map. Drag to move; scroll or pinch to zoom; right-drag or use Tilt view to see terrain."></div>
+<div id="mapFallback" class="map-fallback"><img id="satellitePreview" alt="Satellite image centered on the selected Haiti tour stop"><div id="fallbackLabel" class="fallback-label">Satellite preview · loading interactive map…</div><p id="imageFailure" hidden>Satellite imagery could not load. Check your internet connection, then retry.</p></div>
+<div class="map-heading"><span class="live-dot"></span><span id="mapMode">LOADING SATELLITE VIEW</span></div>
+<div class="map-tools" aria-label="Map tools"><button id="recenter" title="Recenter selected stop">Recenter</button><button id="topView" aria-pressed="true">From above</button><button id="tiltView" aria-pressed="false">Tilt view</button><button id="zoomIn" aria-label="Zoom in">+</button><button id="zoomOut" aria-label="Zoom out">−</button><button id="terrainToggle" aria-pressed="false">3D terrain: off</button><button id="quality" aria-pressed="false">Lighter graphics</button></div>
+<div class="map-bottom"><p id="message" role="status" aria-live="polite">Loading interactive map. Tour controls are ready.</p><button id="retry" hidden>Retry map</button><p id="mapNotice">Imagery shows the actual site; elevation shapes the landscape. Detailed monument meshes are not included.</p></div>
+</section>
+</main>
 </body></html>

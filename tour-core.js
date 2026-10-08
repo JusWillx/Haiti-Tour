@@ -27,7 +27,7 @@
   const nextIndex = (i, n) => (n > 0 ? (i + 1) % n : 0);
   const prevIndex = (i, n) => (n > 0 ? (i - 1 + n) % n : 0);
 
-  const flightDuration = slow => slow ? 6 : 2;
+  const flightDuration = slow => slow ? 6 : 0.8;
   const api = { flightDuration, AREA, validatePlace, inArea, usable, nextIndex, prevIndex };
   if (typeof module !== 'undefined') module.exports = api;
   root.Tour = api;

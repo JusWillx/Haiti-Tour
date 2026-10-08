@@ -36,3 +36,14 @@ Restored bytes equal original: true
 Implemented choice to review: restore the source in a temporary exercise copy and rerun tests rather than weaken the validator. A separate DOM-double check confirmed the warning and exclusion of the incomplete stop. Rejected approach: counting a mock or Node check as a real WebGL/browser demonstration. The browser preview was blocked, so manual results remain pending.
 
 The student still needs to read the code, confirm these choices, and describe any independent edits or decisions accurately. Full repair evidence is in evidence/break-and-repair.txt.
+
+
+## Rebuild follow-up — actual session
+
+User: “its slow and its not responsive whatsoever and i dont want a grid i want the actual landmarks view thru the cesium api this needs to be redone”
+
+AI: “I’ll redo the globe and controls around actual geographic imagery, improve responsiveness, and investigate what’s making it slow.”
+
+Accepted implementation changes to review: real satellite/elevation providers; local engine files; immediate selection text; mobile map layout; on-demand rendering; throttled flight HUD; touch controls. Rejected: treating a grid as a landmark view or claiming satellite/elevation data is a photorealistic building mesh.
+
+Debugging evidence: the first actual browser run reported “Cannot set properties of undefined (setting 'show')”. The fix guards absent sun/moon objects when sky effects are disabled. Missing runtime resource files were added rather than ignoring 404s. Browser tests use actual upstream imagery/elevation responses; container network transport limitations are explained in the evidence.

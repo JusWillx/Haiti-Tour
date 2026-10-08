@@ -3,7 +3,7 @@ const T=typeof Tour!=='undefined'?Tour:require('./tour-core.js');
 const F=typeof Flight!=='undefined'?Flight:require('./flight-core.js');
 const data=typeof PLACES!=='undefined'?PLACES:require('./places.js');
 const results=[];const test=(name,fn)=>{try{if(!fn())throw Error('Unexpected result');results.push('PASS: '+name);}catch(e){results.push('FAIL: '+name+' '+e.message);}};
-test('Slow Tour uses six seconds instead of two',()=>T.flightDuration(true)===6&&T.flightDuration(false)===2);
+test('Slow Tour uses six seconds instead of 0.8',()=>T.flightDuration(true)===6&&T.flightDuration(false)===0.8);
 test('Three history stops are supplied',()=>data.length===3);
 test('Coordinate sources are HTTPS',()=>data.every(p=>/^https:\/\//.test(p.coordinateSource)));
 test('Missing date is rejected',()=>T.validatePlace({...data[0],checked:''}).some(x=>x.includes('checked')));
