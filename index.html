@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Explore Haiti's historical landmarks using real satellite imagery and elevation in CesiumJS.">
 <title>Ayiti · Haiti from Above</title>
-<link rel="stylesheet" href="vendor/cesium/widgets.css"><link rel="stylesheet" href="style.css?v=3">
-<script defer src="places.js"></script><script defer src="tour-core.js"></script><script defer src="flight-core.js"></script><script defer src="view-core.js"></script><script defer src="app.js?v=3"></script>
+<link rel="stylesheet" href="vendor/cesium/widgets.css"><link rel="stylesheet" href="style.css?v=4">
+<script defer src="places.js"></script><script defer src="tour-core.js"></script><script defer src="flight-core.js"></script><script defer src="view-core.js"></script><script defer src="app.js?v=4"></script>
 </head>
 <body>
 <header class="app-header"><a href="index.html" class="brand">AYITI <span>HAITI FROM ABOVE</span></a><div class="header-right"><span class="version">EXPLORE · V3</span><a href="tests.html">Test console ↗</a></div></header>
@@ -14,18 +14,19 @@
 <div class="intro"><p class="eyebrow">HISTORY · CULTURE · COAST</p><h1>Explore the places.<br>Discover the stories.</h1><p class="intro-copy">Real satellite imagery. Optional 3D mountain terrain. Seven stops through Haiti’s landmarks, cities, beaches, and natural beauty.</p></div>
 <div class="mode-tabs" aria-label="Experience"><button id="tourMode" aria-pressed="true">Explore Haiti</button><button id="flightMode" aria-pressed="false">Practice flight</button></div>
 <section id="tourPanel">
-<div class="count-row"><span id="count" class="eyebrow"></span><span class="location-tag">NORTHERN HAITI</span></div>
+<div class="count-row"><span id="count" class="eyebrow"></span><span class="location-tag">HAITI</span></div>
 <div id="stopList" class="stop-list" aria-label="Choose a tour stop"></div>
 <p id="era" class="era"></p><h2 id="name"></h2><p id="desc"></p><p id="coords" class="small"></p>
 <div class="navigation"><button id="prev" aria-label="Previous stop">← Previous</button><button id="next" class="primary">Next stop →</button></div>
 <button id="slow" class="wide" aria-pressed="false">Slow Tour: off</button>
-<details class="sources"><summary>History & coordinate sources</summary><div id="source"></div><p id="coordinateNote" class="small"></p><p class="small">Cybersecurity connection: validate inputs and check the origin of information before trusting it.</p></details>
+<details class="sources"><summary>Place & coordinate sources</summary><div id="source"></div><p id="coordinateNote" class="small"></p><p class="small">Cybersecurity connection: validate inputs and check the origin of information before trusting it.</p></details>
 </section>
-<section id="flightPanel" hidden><p class="eyebrow">SIMULATED FLIGHT</p><h2>Take the controls.</h2><p class="small">A simple camera-flight simulation, starting at your selected stop. No aircraft physics or collision detection.</p>
+<section id="flightPanel" hidden><p class="eyebrow">SIMULATED FLIGHT</p><h2>Fly to a tour stop.</h2>
+<label for="flightDestination">Destination</label><select id="flightDestination"></select><p id="destinationInfo" class="small"></p><p id="flightGuidance" class="telemetry" role="status"></p><div class="navigation"><button id="aimDestination">Aim at stop</button><button id="nextDestination">Next destination →</button></div><button id="exploreDestination" class="wide">Explore this stop</button><p class="small">Fly a short approach toward a tour stop. Follow the destination heading and distance; the flight pauses within 250 metres. This is a simulation, with no landing physics or collision detection.</p>
 <label for="heading">Heading <output id="headingOut">0°</output></label><input id="heading" type="range" min="0" max="359" value="0">
 <label for="speed">Speed <output id="speedOut">70 m/s</output></label><input id="speed" type="range" min="0" max="150" value="70">
 <label for="height">Height above ellipsoid <output id="heightOut">2200 m</output></label><input id="height" type="range" min="1200" max="5000" step="50" value="2200">
-<div class="navigation"><button id="play" class="primary">Start flight</button><button id="reset">Reset at stop</button></div>
+<div class="navigation"><button id="play" class="primary">Start flight</button><button id="reset">Restart approach</button></div>
 <div class="direction-pad" aria-label="Touch flight controls"><button id="turnLeft" aria-label="Turn left">↶ Left</button><button id="climb" aria-label="Climb">↑ Climb</button><button id="turnRight" aria-label="Turn right">Right ↷</button><button id="descend" aria-label="Descend">↓ Descend</button></div>
 <p id="telemetry" class="telemetry" role="status"></p><p class="small">Desktop: arrows turn or change height; Space pauses. On a phone, use the sliders and buttons.</p></section>
 <div id="problems" class="problems" role="alert"></div>

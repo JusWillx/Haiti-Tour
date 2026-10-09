@@ -173,3 +173,10 @@ PASS: Every record in places.js is usable
 
 
 Restored bytes equal original: true",PASS,evidence/v3-break-and-repair.txt
+PUB1,Published files,2026-10-08,Required scripts/styles return200,"Cesium runtime, stylesheet, application, data, and tests returned200",PASS,evidence/published-check.txt
+PUB2,Published navigation,2026-10-08,Seven stop names/counters and last-to-first wrapping work,All seven selected; Next from7 returned1,PASS,evidence/published-check.txt
+PUB3,Published tests.html,2026-10-08,40 checks pass,40 PASS; no FAIL,PASS,evidence/published-check.txt
+PUB4,Published WebGL,2026-10-08,Interactive map and flight render,Remote browser failed WebGL initialization; not demonstrated,BLOCKED,evidence/published-check.txt
+FD1,Flight destination UI test,2026-10-08,Seven flight choices change destination and story,Observed with Node DOM/Cesium doubles,PASS,evidence/flight-destination-tests.txt
+FD2,Flight destination UI test,2026-10-08,Aim points toward target; Explore opens selected story,Observed with Node DOM/Cesium doubles,PASS,evidence/flight-destination-tests.txt
+FD3,Flight destination UI test,2026-10-08,Flying approach pauses within250m; no queued frame remains,Observed with Node DOM/Cesium doubles,PASS,evidence/flight-destination-tests.txt

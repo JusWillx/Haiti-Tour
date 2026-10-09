@@ -33,6 +33,7 @@
     num.className = 'stop-number'; num.textContent = n+1; label.textContent = p.name; button.append(num,label);
     button.setAttribute('aria-label',`Visit ${p.name}`); button.onclick = () => select(n);
     $('stopList').append(button); buttons.push(button);
+    const option=document.createElement('option');option.value=String(n);option.textContent=p.name;$('flightDestination').append(option);
   });
 
   function preview(){
@@ -52,6 +53,7 @@
     $('source').replaceChildren(); textLink($('source'),'About this place',p.source); textLink($('source'),'Coordinate record',p.coordinateSource);
     const date = document.createElement('p'); date.textContent = 'Checked: '+p.checked; $('source').append(date);
     $('coordinateNote').textContent = p.coordinateNote;
+    $('flightDestination').value=String(index);$('destinationInfo').textContent=p.era+' · '+p.description.split('\n')[0];
     buttons.forEach((b,n) => b.setAttribute('aria-pressed',String(n===index)));
     markers.forEach((m,n) => { m.point.color = n===index ? Cesium.Color.fromCssColorString('#d21034') : Cesium.Color.WHITE; });
     if(!viewer) preview();else loadCloseup();
@@ -114,10 +116,10 @@
     $('headingOut').textContent=Math.round(state.heading)+'°';$('speedOut').textContent=state.speed+' m/s';$('heightOut').textContent=state.height+' m';
     $('play').textContent=state.paused?'Start flight':'Pause flight';updateHud();
   }
-  function updateHud(){stats.hudUpdates++;$('telemetry').textContent=`${state.paused?'PAUSED':'FLYING'} · LAT ${state.lat.toFixed(5)} · LON ${state.lon.toFixed(5)}`;}
+  function updateHud(){stats.hudUpdates++;const p=stops[index];if(p){const g=View.destinationGuidance(state,p);$('flightGuidance').textContent=`${p.name} · ${g.arrived?'ARRIVED':(g.distance/1000).toFixed(2)+' km away'} · target heading ${Math.round(g.bearing)}°`;}$('telemetry').textContent=`${state.paused?'PAUSED':'FLYING'} · LAT ${state.lat.toFixed(5)} · LON ${state.lon.toFixed(5)}`;}
   function pauseFlight(){state.paused=true;if(runningFrame!==null)cancelAnimationFrame(runningFrame);runningFrame=null;lastFrame=null;syncControls();}
   function resetFlight(){
-    pauseFlight();const p=stops[index];state={...Flight.initial(),lon:p?.lon??-72.24336,lat:p?.lat??19.57333,height:Math.max(2200,Math.ceil((p?groundHeight(p):0)+600))};
+    pauseFlight();const p=stops[index];state={...Flight.initial(),lon:p?.lon??-72.24336,lat:(p?.lat??19.57333)-2000/111320,height:Math.max(2200,Math.ceil((p?groundHeight(p):0)+600))};
     syncControls();renderFlight();
   }
   function renderFlight(){
@@ -134,6 +136,7 @@
     runningFrame=null;if(state.paused || mode!=='flight' || !viewer)return;
     const dt=lastFrame===null?0:Math.min((time-lastFrame)/1000,.1);lastFrame=time;
     state=Flight.step(state,dt);stats.flightFrames++;renderFlight();
+    if(stops[index]&&View.destinationGuidance(state,stops[index]).arrived){pauseFlight();status('Arrived near '+stops[index].name+'. Choose Explore this stop to read its story.');return;}
     if(time-lastHud>=150){updateHud();lastHud=time;}
     runningFrame=requestAnimationFrame(frame);
   }
@@ -141,6 +144,10 @@
     if(!viewer || mode!=='flight')return; state.paused=false;lastFrame=null;syncControls();
     if(runningFrame===null)runningFrame=requestAnimationFrame(frame);
   }
+  $('flightDestination').onchange=()=>select(Number($('flightDestination').value));
+  $('nextDestination').onclick=()=>select(Tour.nextIndex(index,stops.length));
+  $('aimDestination').onclick=()=>{if(!stops[index])return;state.heading=View.destinationGuidance(state,stops[index]).bearing;syncControls();renderFlight();};
+  $('exploreDestination').onclick=()=>setMode('tour');
   $('play').onclick=()=>state.paused?startFlight():pauseFlight();$('reset').onclick=resetFlight;
   for(const key of ['heading','speed','height']) $(key).oninput=()=>{state[key]=Number($(key).value);syncControls();if(mode==='flight')renderFlight();};
   function adjust(action){

@@ -18,3 +18,5 @@ Optional flight checks: begins paused at selected stop; Start moves coordinates;
 Give the ZIP and README to a real partner and fill Partner_Review.md. Automated browser review is not partner feedback.
 
 V3: visit all seven stops; Next wraps Île-à-Vache to Citadelle, Previous wraps Citadelle to Île-à-Vache. Check both cities, beach, waterfall, and island camera framing. Confirm no northern-only validation warning for southern stops. These manual checks are pending actual user observation.
+
+Flight destination revision: choose any stop in flight dropdown, Start, follow target bearing (or Aim at stop), observe shrinking distance and arrival pause; Explore this stop must open the same story. Next destination deliberately restarts a2km approach; it does not simulate travel between distant locations. Live WebGL observation pending upload.

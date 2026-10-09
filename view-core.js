@@ -16,6 +16,13 @@
    return url.href;
  }
  function renderOptions(){return {requestRenderMode:true,maximumRenderTimeChange:Infinity,targetFrameRate:30,useBrowserRecommendedResolution:true,shadows:false,shouldAnimate:false,msaaSamples:1};}
- const api={imageryUrl,terrainUrl,rangeFor,flightDuration,bounds,exportUrl,renderOptions};
+ function destinationGuidance(state,p){
+   const rad=Math.PI/180,lat1=state.lat*rad,lat2=p.lat*rad,dlat=lat2-lat1,dlon=(p.lon-state.lon)*rad;
+   const a=Math.sin(dlat/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin(dlon/2)**2;
+   const distance=6371000*2*Math.atan2(Math.sqrt(Math.min(1,a)),Math.sqrt(Math.max(0,1-a)));
+   const bearing=(Math.atan2(Math.sin(dlon)*Math.cos(lat2),Math.cos(lat1)*Math.sin(lat2)-Math.sin(lat1)*Math.cos(lat2)*Math.cos(dlon))/rad+360)%360;
+   return {distance,bearing,arrived:distance<=250};
+ }
+ const api={destinationGuidance,imageryUrl,terrainUrl,rangeFor,flightDuration,bounds,exportUrl,renderOptions};
  if(typeof module!=='undefined')module.exports=api;root.View=api;
 })(globalThis);
