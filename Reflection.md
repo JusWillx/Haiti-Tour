@@ -1,6 +1,6 @@
 # Reflection draft — review before submitting
 
-I chose a Haiti history tour because my Haitian background is important to me, and I wanted the project to connect with something personal. I requested the Haitian flag colors and wanted users to explore historical landmarks while learning about their meaning. I also chose Ramiers as the third landmark after reviewing its published coordinates. The cybersecurity connection is checking where information comes from and handling incomplete data honestly.
+I chose a Haiti history tour because my Haitian background is important to me, and I wanted the project to connect with something personal. I requested the Haitian flag colors and wanted users to explore historical landmarks while learning about their meaning. I expanded the tour to seven stops covering cities, beaches, natural attractions, and historic landmarks. The cybersecurity connection is checking where information comes from and handling incomplete data honestly.
 
 My feedback helped shape the second version. I pointed out that the first project was slow, difficult to use, and showed a grid instead of the actual places. AI helped rebuild it with satellite imagery and elevation through Cesium, a mobile layout, and touch flight controls. It also changed the code so the flight loop stops when paused and the text panel is not rewritten every frame. Slow Tour remains an optional feature rather than making every transition slow.
 

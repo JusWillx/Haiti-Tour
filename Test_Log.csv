@@ -142,3 +142,34 @@ RS2,Revised browser smoke,2026-10-08,Ramiers navigation updates stop,Ramiers nav
 RS3,Revised browser smoke,2026-10-08,Verified Ramiers coordinates and camera range,Verified Ramiers coordinates and camera range observed,PASS,evidence/ramiers-browser-smoke.json
 RS4,Revised browser smoke,2026-10-08,Phone has no horizontal overflow,Phone has no horizontal overflow observed,PASS,evidence/ramiers-browser-smoke.json
 RS5,Revised browser smoke,2026-10-08,All 40 browser rules pass,All 40 browser rules pass observed,PASS,evidence/ramiers-browser-smoke.json
+V3-tests.js,Seven-stop revision,2026-10-08,"Checks pass (break exercise fails deliberately, then restores)","caught
+PASS: Missing source is flagged
+PASS: Photo without alt text is flagged
+PASS: usable() drops bad records only
+PASS: Every record in places.js is usable",PASS,evidence/v3-tour-tests.txt
+V3-flight-tests.js,Seven-stop revision,2026-10-08,"Checks pass (break exercise fails deliberately, then restores)","true },
+  { name: 'Zero speed keeps position', pass: true },
+  {
+    name: 'Duration consistency: one second equals ten 0.1-second steps',
+    pass: true
+  }
+]",PASS,evidence/v3-flight-tests.txt
+V3-feature-tests.js,Seven-stop revision,2026-10-08,"Checks pass (break exercise fails deliberately, then restores)","is rejected
+PASS: Initial flight state is in northern Haiti
+PASS: Nonfinite time cannot corrupt state
+PASS: All seven descriptions and camera bounds are usable",PASS,evidence/v3-feature-tests.txt
+V3-view-tests.js,Seven-stop revision,2026-10-08,"Checks pass (break exercise fails deliberately, then restores)","fall back to Citadelle
+PASS: Idle map uses request-render mode
+PASS: GPU work is capped at 30 FPS and no shadows
+PASS: Satellite and terrain use HTTPS services",PASS,evidence/v3-view-tests.txt
+V3-ui-logic-tests.js,Seven-stop revision,2026-10-08,"Checks pass (break exercise fails deliberately, then restores)","e not rewritten per frame
+PASS: Touch turn buttons and Reset work
+PASS: Returning to tour or hiding tab pauses flight
+PASS: Mobile defaults to lighter graphics",PASS,evidence/v3-ui-logic-tests.txt
+V3-break-and-repair.js,Seven-stop revision,2026-10-08,"Checks pass (break exercise fails deliberately, then restores)","d
+PASS: Photo without alt text is flagged
+PASS: usable() drops bad records only
+PASS: Every record in places.js is usable
+
+
+Restored bytes equal original: true",PASS,evidence/v3-break-and-repair.txt

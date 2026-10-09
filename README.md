@@ -1,4 +1,4 @@
-# Ayiti — Haiti from Above · rebuilt V2
+# Ayiti — Haiti from Above · seven-stop V3
 
 **Path B · Tour_Lab**, with the supplied Flight_Lab movement core for a practice-flight mode. The active app starts with real satellite imagery and offers optional 3D elevation through **CesiumJS 1.145.0**. The old grid is removed.
 
@@ -8,7 +8,7 @@
 2. Replace the old repository files with these files and folders. Keep `index.html`, `app.js`, `style.css`, `places.js`, `view-core.js`, `assets/`, and **`vendor/`** at the repository root. The bundled engine will not load if vendor is omitted. Include the assignment documents and evidence too.
 3. Commit the changes on `main`. Add the empty `.nojekyll` file using **Add file → Create new file** if your upload interface hides it.
 4. In **Settings → Pages**, select **Deploy from a branch → main → /(root) → Save**.
-5. Wait for the Pages deployment to succeed in Actions. Open the URL shown in Settings → Pages. It should display **REBUILT · V2** in the desktop header.
+5. Wait for the Pages deployment to succeed in Actions. Open the URL shown in Settings → Pages. It should display **EXPLORE · V3** in the desktop header.
 6. Hard-refresh the published page with Ctrl+Shift+R if the older design appears. Open `tests.html` at the same site path to run the browser rule tests.
 
 If GitHub reports that a batch contains too many files, upload the project files and the vendor folder in separate commits, or use GitHub Desktop to commit the extracted folder. Do not upload only the ZIP: Pages needs its extracted contents. This ZIP replaces the prior project; it does not directly modify an existing GitHub repository or publish a site.
@@ -41,7 +41,7 @@ Keep the terminal open and visit `http://localhost:8000/index.html`, then `http:
 
 Satellite imagery shows actual roofs, vegetation, and land at the stop coordinates; elevation can give the landscape a 3D shape. These layers **do not contain detailed, photorealistic monument meshes**. No downloaded 3D scans of the Citadelle or Sans-Souci are included. Imagery resolution/date and elevation accuracy depend on the upstream services. The flight is spherical camera movement, not aircraft physics, travel advice, or collision simulation. Heights are above the ellipsoid, not guaranteed clearance above local terrain.
 
-The third stop is **Fortifications of Ramiers**, using the site reference printed on page 6 of ISPAN Bulletin No. 29. Its coordinates and historical description were checked on 2026-10-08. All positions are approximate. Follow each source link before sharing.
+The active tour has seven stops: Citadelle, Sans-Souci, Cap-Haïtien, Labadee, Jacmel, Bassin Bleu, and Île-à-Vache. Ramiers has been removed. Each stop has a two-paragraph description, coordinate provenance, and a checked date. City/island points are approximate overviews. Sources describe these places; the app does not establish current tourism operations or admission.
 
 ## Pitch
 
@@ -52,7 +52,7 @@ The third stop is **Fortifications of Ramiers**, using the site reference printe
 | Files | Purpose |
 |---|---|
 | index.html, style.css, app.js | Responsive UI and Cesium integration |
-| places.js, descriptions/ | Three sourced records and matching description files |
+| places.js, descriptions/ | Seven sourced records and matching description files |
 | tour-core.js, flight-core.js, view-core.js | Testable navigation, movement, camera and imagery helpers |
 | vendor/cesium/, assets/ | Pinned Cesium runtime resources, Apache license, aircraft icon |
 | tests.html, tests.js, flight-tests.js, feature-tests.js, view-tests.js | Browser rule checks |
@@ -83,3 +83,5 @@ Imagery and elevation credits remain visible inside the Cesium view. External se
 The main site needs no npm packages. To reproduce the browser verification script, install Playwright separately (`npm install --no-save playwright`, then `npx playwright install chromium`) and run `node verification/browser-tests.js`. Python 3 is required only if you deliberately enable its container network relay. The verification script creates a local test server and does not publish the site.
 
 Cesium startup first uses the bundled vendor folder, then retries the official pinned 1.145 CDN if that upload is missing. Both can fail if blocked; the app reports the attempted locations. Upload the whole vendor folder alongside index.html for reliable local assets.
+
+V3 changes: the geographic validation box now includes southern Haiti; wider city/island views use appropriate camera distances and bounded imagery. Phone navigation is a scrollable list. The 55 Node checks and missing-data repair were rerun. Earlier browser screenshots/results are versioned historical evidence, not verification of the seven-stop live imagery. Test the seven-stop version on your own GitHub Pages URL before submission.

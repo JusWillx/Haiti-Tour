@@ -3,7 +3,7 @@
 ## Included
 
 - Path B project adapted from the supplied Tour starter, with optional Flight starter movement.
-- Three cited stop records and three matching description files.
+- Seven cited stop records and seven matching description files.
 - Haitian flag colors; real satellite imagery and elevation through Cesium; no grid in active app.
 - Optional Slow Tour feature, map tools, mobile layout, touch flight controls.
 - Bundled CesiumJS 1.145.0, run steps, GitHub Pages instructions, license and credits.

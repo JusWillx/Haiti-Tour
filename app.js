@@ -49,7 +49,7 @@
     $('count').textContent = `STOP ${index+1} / ${stops.length}`;
     $('name').textContent = p.name; $('era').textContent = p.era; $('desc').textContent = p.description;
     $('coords').textContent = `${p.lat.toFixed(5)}° N · ${Math.abs(p.lon).toFixed(5)}° W · approximate`;
-    $('source').replaceChildren(); textLink($('source'),'History · UNESCO',p.source); textLink($('source'),'Coordinate record',p.coordinateSource);
+    $('source').replaceChildren(); textLink($('source'),'About this place',p.source); textLink($('source'),'Coordinate record',p.coordinateSource);
     const date = document.createElement('p'); date.textContent = 'Checked: '+p.checked; $('source').append(date);
     $('coordinateNote').textContent = p.coordinateNote;
     buttons.forEach((b,n) => b.setAttribute('aria-pressed',String(n===index)));
@@ -61,7 +61,7 @@
     return new Cesium.UrlTemplateImageryProvider({
       url:View.imageryUrl+'/tile/{z}/{y}/{x}',
       rectangle:Cesium.Rectangle.fromDegrees(...View.bounds(p)),
-      minimumLevel:14,maximumLevel:18,
+      minimumLevel:p.imageryMinimumLevel||14,maximumLevel:18,
       credit:new Cesium.Credit('Satellite imagery: Esri, Vantor, Earthstar Geographics, GIS User Community')
     });
   }

@@ -6,15 +6,51 @@ UNESCO World Heritage Centre: https://whc.unesco.org/en/list/180/
 
 Checked: the 1804 independence context and fortress commission; Sans-Souci’s royal and administrative role, 1813 inauguration, and 1842 earthquake damage; the National History Park’s component sites and its 1982 inscription. The stop descriptions paraphrase this institutional account. No current access, opening hours, fees, or travel-safety claims are included.
 
-## Geographic records — rechecked 2026-10-08
+## Active seven-stop geographic and description sources — checked 2026-10-08
 
-| Stop | Coordinate source | Longitude, latitude | Limitation |
-|---|---|---|---|
-| Citadelle | https://www.geonames.org/3723098/citadelle-laferriere.html | -72.24336, 19.57333 | Gazetteer approximation; retrieved search result, direct opening unavailable. Not a surveyed entrance. |
-| Sans-Souci | https://www.wikidata.org/wiki/Q930795 | -72.2185972222, 19.6046916667 | Coordinate imported from German Wikipedia; approximate, not independently surveyed. |
-| Ramiers | https://ufdcimages.uflib.ufl.edu/AA/00/06/57/66/00020/Bulletin_ISPAN_No_29.pdf | -72.244525, 19.56398888888889 | ISPAN No.29, page 6; approximate site reference, checked 2026-10-08. |
+### Citadelle Laferrière
+Description: https://whc.unesco.org/en/list/180/
+Coordinate record: https://www.geonames.org/3723098/citadelle-laferriere.html
+Longitude, latitude: -72.24336, 19.57333
+GeoNames feature 3723098; approximate landmark location, not an entrance or surveyed boundary.
 
-DMS conversion: degrees + minutes/60 + seconds/3600. West longitude is negative, and Cesium receives longitude first. The palace source gives N19 36 16.89, W72 13 6.95. UNESCO’s property point gives N19 34 22.89, W72 14 3.365. The region box is a coarse validation aid, not a Haiti boundary or proof of precision.
+### Palais Sans-Souci
+Description: https://whc.unesco.org/en/list/180/
+Coordinate record: https://www.wikidata.org/wiki/Q930795
+Longitude, latitude: -72.21859722222223, 19.604691666666668
+Wikidata coordinate statement, imported from German Wikipedia; approximate and not independently surveyed.
+
+### Cap-Haïtien
+Description: https://visithaiti.com/destinations/cap-haitien-city-guide/
+Coordinate record: https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=&place=&subjectid=1016735
+Longitude, latitude: -72.198, 19.759
+Getty TGN 1016735 published decimal city reference. Approximate city overview, not a cathedral or entrance.
+
+### Labadee
+Description: https://ambhaitibenin.org/public/decouvrir-haiti/cap-haitien/lieu/plage-labadee
+Coordinate record: https://www.wikidata.org/wiki/Q1246231
+Longitude, latitude: -72.24555555555555, 19.78638888888889
+Wikidata Q1246231: N19 47 11, W72 14 44, imported from German Wikipedia. Approximate Labadie/Labadee area view, not a specific beach entrance.
+
+### Jacmel
+Description: https://www.unesco.org/en/creative-cities/jacmel
+Coordinate record: https://www.wikidata.org/wiki/Q923362
+Longitude, latitude: -72.53472222222221, 18.234166666666667
+Wikidata city reference N18 14 3, W72 32 5; imported from Russian Wikipedia. Approximate city overview.
+
+### Bassin Bleu
+Description: https://visithaiti.com/wildlife-nature/bassin-bleu-waterfall/
+Coordinate record: https://www.wikidata.org/wiki/Q2887443
+Longitude, latitude: -72.58805555555556, 18.234166666666667
+Wikidata Q2887443: N18 14 3, W72 35 17, imported from French Wikipedia. Approximate natural site reference, not a trailhead.
+
+### Île-à-Vache
+Description: https://visithaiti.com/beaches-islands/ile-a-vache/
+Coordinate record: https://www.wikidata.org/wiki/Q292606
+Longitude, latitude: -73.63, 18.07138888888889
+Wikidata island reference N18 4 17, W73 37 48; imported from Russian Wikipedia. Island overview, not an individual beach.
+
+Published points are approximate, not a survey. Bassin Bleu is the Jacmel natural attraction, not a northern commune or the nearby hamlet. Pool counts differ between some sources; description follows Visit Haiti. UNESCO Creative City status differs from World Heritage inscription. The flight is simulated; no current opening or service schedule is claimed.
 
 ## Imagery/elevation — checked 2026-10-08 UTC
 
@@ -37,8 +73,3 @@ The initial view uses cached satellite tiles through UrlTemplateImageryProvider.
 
 Camera duration is in seconds: normal 0.8, Slow Tour 6, reduced motion 0. Runtime version 1.145.0 was confirmed in its header and live browser. Rendering only on demand and reducing resolution are supported Viewer options; these changes do not guarantee a specific frame rate on every device.
 
-## Ramiers verification — 2026-10-08
-
-UNESCO describes residential remains with two pairs of redoubts. ISPAN Bulletin No. 29 documents their auxiliary defensive role. The original PDF was visually inspected: latitude is 19°33′50.36″ N (not the incorrect OCR transcription 19°32′50.26″), longitude 72°14′40.29″ W. Convert using degrees + minutes/60 + seconds/3600, negate west. The publication attributes its point to Google Earth 2010; no surveyed precision is claimed. It does not conclusively establish the exact construction date or identify the residence as a queen’s palace, so those claims are omitted.
-
-Citadelle coordinates rechecked against GeoNames indexed entry (direct page unavailable); Sans-Souci DMS and provenance rechecked on Wikidata. Official pinned Cesium fallback script retrieved successfully (HTTP 200, 6,018,837 bytes). GitHub deployment still requires the user’s site URL to verify.

@@ -49,3 +49,5 @@ Accepted implementation changes to review: real satellite/elevation providers; l
 Debugging evidence: the first actual browser run reported “Cannot set properties of undefined (setting 'show')”. The fix guards absent sun/moon objects when sky effects are disabled. Missing runtime resource files were added rather than ignoring 404s. Browser tests use actual upstream imagery/elevation responses; container network transport limitations are explained in the evidence.
 
 Follow-up accepted: replace the overview only after verifying ISPAN’s original PDF coordinates. Rejected the corrupted OCR transcription. Added a pinned official Cesium CDN fallback for missing vendor uploads. User prompt: “yes verify everything and then implement everything efficiently.”
+
+V3 user request: “add like cities and beaches and other attractions ... total of 7 stops ... remove the 3rd stop.” Accepted seven distinct places and longer original descriptions; rejected retaining Ramiers or reusing a northern-only geographic box. Published references are labeled as overviews where appropriate.

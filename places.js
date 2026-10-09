@@ -1,5 +1,4 @@
-/* Historical facts checked against UNESCO; coordinate sources are separate.
-   Longitude FIRST. Coordinates are approximate and are not travel guidance. */
+/* Seven-stop virtual tour. Longitude first; approximate published references. */
 const PLACES = [
   {
     "id": "citadelle",
@@ -7,7 +6,7 @@ const PLACES = [
     "era": "1804 · Defending independence",
     "lon": -72.24336,
     "lat": 19.57333,
-    "description": "After Haiti declared independence in 1804, Dessalines assigned Henri Christophe to build a fortress on Pic Laferrière. Its inland mountain position supported the defense of the new republic. This stop asks how geography can shape a security strategy.",
+    "description": "Rising above the mountains of northern Haiti, the Citadelle Laferrière is a powerful expression of the country’s independence. After the declaration of independence in 1804, Jean-Jacques Dessalines entrusted Henri Christophe with building a fortress on Pic Laferrière to protect the new republic. Its inland position made the mountain itself part of the defensive strategy.\n\nThe fortress brings together massive walls, artillery positions, barracks, and a central courtyard. Its significance extends beyond military engineering: it represents the determination of formerly enslaved people to defend their freedom. In this aerial view, notice how the building follows the ridge and dominates the surrounding valleys. The Citadelle belongs to the UNESCO-listed National History Park alongside Sans-Souci and Ramiers.",
     "coordinateSource": "https://www.geonames.org/3723098/citadelle-laferriere.html",
     "coordinateNote": "GeoNames feature 3723098; approximate landmark location, not an entrance or surveyed boundary.",
     "source": "https://whc.unesco.org/en/list/180/",
@@ -21,7 +20,7 @@ const PLACES = [
     "era": "1813 · Government and power",
     "lon": -72.21859722222223,
     "lat": 19.604691666666668,
-    "description": "Near Milot, Sans-Souci served as Henri Christophe’s royal residence and an administrative center. Inaugurated in 1813, it was later seriously damaged by the 1842 earthquake. Its ruins invite discussion about power, public institutions, and the preservation of historical records.",
+    "description": "At the foot of the mountains near Milot, Palais Sans-Souci offers a different perspective on Haiti’s early independence. Inaugurated in 1813, it was Henri Christophe’s principal royal residence and the center of an ensemble that included government offices and other institutions. Its staircases, terraces, gardens, and architectural scale expressed the ambitions of the northern kingdom.\n\nThe palace was looted after Christophe’s death in 1820 and seriously damaged by the earthquake of 1842. Its remaining walls and openings still reveal the proportions of the original complex. Compare its lower, open setting with the Citadelle’s fortified mountaintop: one organized royal and administrative life, while the other defended the territory. Together, their ruins show why preserving buildings also means preserving the history of the people and institutions behind them.",
     "coordinateSource": "https://www.wikidata.org/wiki/Q930795",
     "coordinateNote": "Wikidata coordinate statement, imported from German Wikipedia; approximate and not independently surveyed.",
     "source": "https://whc.unesco.org/en/list/180/",
@@ -30,18 +29,89 @@ const PLACES = [
     "photoAlt": ""
   },
   {
-    "id": "ramiers",
-    "name": "Fortifications of Ramiers",
-    "era": "Early 1800s · A layered defense",
-    "lon": -72.244525,
-    "lat": 19.56398888888889,
-    "description": "South of the Citadelle, Ramiers preserves residential ruins protected by four fortified redoubts. These independent defensive works guarded a vulnerable approach to the fortress and supported one another. Together with the Citadelle and Sans-Souci, the site belongs to the UNESCO-listed National History Park. This stop connects layered physical defenses with defense in depth in cybersecurity.",
-    "coordinateSource": "https://ufdcimages.uflib.ufl.edu/AA/00/06/57/66/00020/Bulletin_ISPAN_No_29.pdf",
-    "coordinateNote": "ISPAN Bulletin No. 29 (1 October 2011), printed page 6: N19°33′50.36″, W72°14′40.29″. Published site reference attributed to Google Earth 2010; approximate, not a surveyed entrance or individual redoubt.",
-    "source": "https://whc.unesco.org/en/list/180/",
+    "id": "cap-haitien",
+    "name": "Cap-Haïtien",
+    "era": "City · Northern coast",
+    "lon": -72.198,
+    "lat": 19.759,
+    "description": "Cap-Haïtien, often called Okap, is a coastal city where urban life and Haitian history meet. Its streets contain colonial-era architecture, markets, churches, and a waterfront facing the bay. The city’s relationship with the Haitian Revolution makes it an important starting point for understanding the north, while the nearby Citadelle and Sans-Souci connect its streets to the wider historical landscape.\n\nIts appeal also comes from everyday culture: regional food, music, commerce, and the communities that keep the city active. From above, follow the street pattern toward the shore and compare the dense buildings with the hills behind them. This stop uses an approximate city reference point rather than a single attraction, giving you an overview of the setting before you zoom in and explore.",
+    "source": "https://visithaiti.com/destinations/cap-haitien-city-guide/",
+    "coordinateSource": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=&place=&subjectid=1016735",
+    "coordinateNote": "Getty TGN 1016735 published decimal city reference. Approximate city overview, not a cathedral or entrance.",
     "checked": "2026-10-08",
     "photo": "",
-    "photoAlt": ""
+    "photoAlt": "",
+    "cameraRange": 4200,
+    "imagerySpan": 0.03,
+    "imageryMinimumLevel": 11
+  },
+  {
+    "id": "labadee",
+    "name": "Labadee",
+    "era": "Beach · Coastal peninsula",
+    "lon": -72.24555555555555,
+    "lat": 19.78638888888889,
+    "description": "Northwest of Cap-Haïtien, Labadee is a coastal destination known for pale sandy beaches, blue water, and green hills rising behind the shoreline. Its peninsula setting creates sheltered coves and a striking contrast between forested land and the sea. It is connected to Haiti’s mainland; it is not a separate island.\n\nLabadee is especially associated with cruise tourism and a privately managed resort area. That connection has shaped the waterfront through beach facilities, a pier, and recreation infrastructure. In the satellite view, compare the developed shore with the less built-up hills around it. The marker represents the broader Labadie/Labadee location, not a specific beach entrance. This virtual stop describes the landscape and tourism identity; it does not establish current resort access or cruise operations.",
+    "source": "https://ambhaitibenin.org/public/decouvrir-haiti/cap-haitien/lieu/plage-labadee",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q1246231",
+    "coordinateNote": "Wikidata Q1246231: N19 47 11, W72 14 44, imported from German Wikipedia. Approximate Labadie/Labadee area view, not a specific beach entrance.",
+    "checked": "2026-10-08",
+    "photo": "",
+    "photoAlt": "",
+    "cameraRange": 2300,
+    "imagerySpan": 0.018,
+    "imageryMinimumLevel": 12
+  },
+  {
+    "id": "jacmel",
+    "name": "Jacmel",
+    "era": "City · Arts and coastal culture",
+    "lon": -72.53472222222221,
+    "lat": 18.234166666666667,
+    "description": "Jacmel brings together a seaside setting and a strong tradition of artistic expression. On Haiti’s southeastern coast, the city is known for its historic center, Carnival, paintings, sculpture, and elaborate papier-mâché masks. UNESCO recognizes Jacmel as a Creative City of Crafts and Folk Art, a designation it has held since 2014. Its cultural identity comes from the artists and craftspeople who pass skills and stories between generations.\n\nThe waterfront and streets offer a different experience from the northern fortresses. Here, heritage includes workshops, public art, and celebrations as well as architecture. Use the aerial view to trace the city’s relationship with the bay, then imagine the street-level detail that a satellite image cannot capture: colors, handmade objects, music, and the people creating them. The marker is an approximate city reference.",
+    "source": "https://www.unesco.org/en/creative-cities/jacmel",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q923362",
+    "coordinateNote": "Wikidata city reference N18 14 3, W72 32 5; imported from Russian Wikipedia. Approximate city overview.",
+    "checked": "2026-10-08",
+    "photo": "",
+    "photoAlt": "",
+    "cameraRange": 4000,
+    "imagerySpan": 0.03,
+    "imageryMinimumLevel": 11
+  },
+  {
+    "id": "bassin-bleu",
+    "name": "Bassin Bleu",
+    "era": "Nature · Waterfalls and pools",
+    "lon": -72.58805555555556,
+    "lat": 18.234166666666667,
+    "description": "In the hills west of Jacmel, Bassin Bleu is a natural attraction formed by pools connected by waterfalls. Rock faces and dense vegetation surround the water, creating a landscape very different from the open coast nearby. Visit Haiti identifies the basins as Cheval, Yes, Palmiste, and Clair, with Bassin Clair particularly prominent in its description of the site.\n\nThis stop shifts the tour from built heritage to the geography of water, forests, and steep terrain. The satellite view helps explain the setting, although small pools and waterfalls can be difficult to distinguish beneath vegetation or at limited image resolution. The published coordinate is an approximate site reference, not a precise swimming spot or trailhead. This is the Bassin Bleu attraction near Jacmel, distinct from the northern Haitian commune with the same name.",
+    "source": "https://visithaiti.com/wildlife-nature/bassin-bleu-waterfall/",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q2887443",
+    "coordinateNote": "Wikidata Q2887443: N18 14 3, W72 35 17, imported from French Wikipedia. Approximate natural site reference, not a trailhead.",
+    "checked": "2026-10-08",
+    "photo": "",
+    "photoAlt": "",
+    "cameraRange": 1200,
+    "imagerySpan": 0.008,
+    "imageryMinimumLevel": 14
+  },
+  {
+    "id": "ile-a-vache",
+    "name": "Île-à-Vache",
+    "era": "Island · Beaches and fishing communities",
+    "lon": -73.63,
+    "lat": 18.07138888888889,
+    "description": "Off Haiti’s southern coast near Les Cayes, Île-à-Vache offers an island landscape of beaches, coves, green hills, and fishing communities. Its appeal lies in the relationship between land and sea: boats connect settlements and coastal livelihoods, while the shoreline gives the island its distinctive shape. The island is a lived-in community as well as a destination associated with beach tourism.\n\nThis wider aerial stop lets you explore that geography rather than focusing on one hotel or beach. Follow the coastline, look for sheltered bays, and compare settlement patterns with the inland vegetation. It is a useful final contrast to the tour’s cities, waterfalls, and mountain monuments. The marker uses a published island reference point, so it should not be interpreted as a particular beach, resort, boat landing, or visitor entrance.",
+    "source": "https://visithaiti.com/beaches-islands/ile-a-vache/",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q292606",
+    "coordinateNote": "Wikidata island reference N18 4 17, W73 37 48; imported from Russian Wikipedia. Island overview, not an individual beach.",
+    "checked": "2026-10-08",
+    "photo": "",
+    "photoAlt": "",
+    "cameraRange": 15000,
+    "imagerySpan": 0.11,
+    "imageryMinimumLevel": 9
   }
 ];
-if (typeof module !== "undefined") module.exports = PLACES;
+if(typeof module!=="undefined")module.exports=PLACES;

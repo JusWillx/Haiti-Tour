@@ -1,8 +1,8 @@
 /* Tour rules with no Cesium and no buttons, so they can be tested on their own. */
 (function (root) {
-  // Area the class project is expected to stay inside (in northern Haiti; a coarse validation box, not a country boundary).
+  // Area the class project is expected to stay inside (across Haiti; a coarse validation box, not a country boundary).
   // Change this box if your verified stops are somewhere else.
-  const AREA = { west: -72.50, east: -72.00, south: 19.30, north: 19.90 };
+  const AREA = { west: -74.50, east: -71.50, south: 18.00, north: 20.20 };
 
   const hasText = v => typeof v === 'string' && v.trim().length > 0;
   const isNum = v => typeof v === 'number' && Number.isFinite(v);
